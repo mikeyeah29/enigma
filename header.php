@@ -7,27 +7,31 @@
 
         <link rel="profile" href="https://gmpg.org/xfn/11">
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo GOOGLE_ANALYTICS_CODE; ?>"></script>
-        <script>
+        <?php if (defined('GOOGLE_ANALYTICS_CODE') && GOOGLE_ANALYTICS_CODE) { ?>
+           
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo GOOGLE_ANALYTICS_CODE; ?>"></script>
+            <script>
 
-            // var user_ip = '<?php // echo rwd_get_user_ip(); ?>';
-            var is_internal = <?php echo \Enigma\Theme\Traffic::is_internal() ? 'true' : 'false'; ?>;
+                // var user_ip = '<?php // echo rwd_get_user_ip(); ?>';
+                var is_internal = <?php echo \Enigma\Theme\Traffic::is_internal() ? 'true' : 'false'; ?>;
 
-            var ga_options = {
-                'debug_mode': true
-            };
+                var ga_options = {
+                    'debug_mode': true
+                };
 
-            if (is_internal) {
-                ga_options['traffic_type'] = 'internal';
-            }
+                if (is_internal) {
+                    ga_options['traffic_type'] = 'internal';
+                }
 
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
 
-            gtag('config', '<?php echo GOOGLE_ANALYTICS_CODE; ?>', ga_options);
-        </script>
+                gtag('config', '<?php echo GOOGLE_ANALYTICS_CODE; ?>', ga_options);
+            </script>
+
+        <?php } ?>
 
         <?php wp_head(); ?>
 
