@@ -18,3 +18,27 @@ $font-logo: "komu-a", sans-serif;
 $font-brand: "polymath", sans-serif;
 $font-display: "polymath";
 $font-alternate: "polymath";
+
+/* Breakpoints
+============================================*/
+
+$breakpoint-sm: 600px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+/* Other
+============================================*/
+
+// $header-height-mobile: 80px;
+// $header-height: 100px;
+// $logo-height: 60px;
+
+/* CSS Variables
+============================================*/
+
+// :root {
+//     --header-height-mobile: $header-height-mobile;
+//     --header-height: $header-height;
+//     --logo-height: $logo-height;
+// }

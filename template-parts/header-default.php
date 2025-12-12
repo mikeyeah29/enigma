@@ -3,16 +3,19 @@
  * Default Header Template
  */
 
-$burger_type = get_theme_mod('burger_menu_style', 'collapse');
-$header_bg_color = get_theme_mod('header_bg_color', '');
-$header_text_color = get_theme_mod('header_text_color', '');
-$header_blur_background = get_theme_mod('header_blur_background', false);
-$header_bg_on_scroll = get_theme_mod('header_bg_on_scroll', false);
+$burger_type = $args['burger_type'];
+$header_bg_color = $args['header_bg_color'];
+$header_text_color = $args['header_text_color'];
+$header_blur_background = $args['header_blur_background'];
+$header_bg_on_scroll = $args['header_bg_on_scroll'];
 
 $header_bg_color_class = ($header_bg_color) ? 'has-' . $header_bg_color . '-background-color' : '';
 $header_text_color_class = ($header_text_color) ? 'has-' . $header_text_color . '-color' : '';
 
 $apply_blur_background = ($header_blur_background && !$header_bg_on_scroll) ? true : false;
+
+$contact_email = get_theme_mod('contact_email', '');
+$contact_phone = get_theme_mod('contact_phone', '');
 
 $header_title = get_bloginfo('name');
 
@@ -24,7 +27,7 @@ if(is_singular('demo')) {
 
 <header class="header-default <?php echo true ? 'is-sticky' : ''; ?> <?php echo ( !$header_bg_on_scroll ? $header_bg_color_class : '' ); ?> <?php echo ( $apply_blur_background ? 'blur-background' : '' ); ?>">
 
-    <div class="container-fluid">
+    <div class="container-fluid w-100">
 
         <div class="d-flex justify-content-between align-items-center">
             <div class="header-default__logo">
@@ -57,12 +60,27 @@ if(is_singular('demo')) {
                     </button>
 
                     <div class="header-default__menu-mobile-menu <?php echo $header_bg_color_class; ?>">
+
                         <?php wp_nav_menu(array(
                             'theme_location' => 'primary', 
                             'container' => false, 
                             'menu_class' => 'header-default__menu-list ' . $header_text_color_class
                         )); 
                         ?>
+
+                        <ul class="ul-reset header-default__menu-mobile-menu-contact">
+                            <li>
+                                <a href="mailto:<?php echo $contact_email; ?>" class="txt-sm">
+                                    <?php echo $contact_email; ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:<?php echo $contact_phone; ?>" class="txt-sm">
+                                    <?php echo $contact_phone; ?>
+                                </a>
+                            </li>
+                        </ul>
+
                     </div>
 
                 </div>
@@ -74,7 +92,6 @@ if(is_singular('demo')) {
     </div>
 
 </header>
-
 
 <script>
 

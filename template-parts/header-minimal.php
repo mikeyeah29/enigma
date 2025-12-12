@@ -46,7 +46,7 @@ if(is_singular('demo')) {
                         <?php endif; ?>
                     </a>
                 </div>
-                <div class="header-minimal__menu <?php echo $header_text_color_class; ?>">
+                <div class="header-minimal__menu <?php echo $header_text_color_class; ?> d-none d-md-block">
                     <?php wp_nav_menu(array(
                         'theme_location' => 'primary', 
                         'container' => false, 
@@ -54,6 +54,26 @@ if(is_singular('demo')) {
                         'menu_id' => 'header-minimal__menu-list',
                     )); ?>
                 </div>
+
+                <div class="header-default__menu-mobile d-md-none">
+
+                    <button class="hamburger hamburger--<?php echo $burger_type; ?> <?php echo $header_text_color_class; ?> position-relative" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+
+                    <div class="header-default__menu-mobile-menu <?php echo $header_bg_color_class; ?>">
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'primary', 
+                            'container' => false, 
+                            'menu_class' => 'header-default__menu-list ' . $header_text_color_class
+                        )); 
+                        ?>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
@@ -61,7 +81,7 @@ if(is_singular('demo')) {
     </div>
 
     <div class="header-minimal-bottom <?php echo $header_contact_bg_color_class; ?>">
-        <div class="container-fluid">
+        <div class="w-100">
 
             <div class="d-flex align-items-center justify-content-between">
         
@@ -81,32 +101,32 @@ if(is_singular('demo')) {
                 </div>
 
                 <div class="header-minimal__menu-social">
-                    <ul class="ul-reset">
+                    <ul class="ul-reset d-flex align-items-center">
                         <?php if(get_theme_mod('social_facebook', '')): ?>
                             <li>
                                 <a href="<?php echo get_theme_mod('social_facebook', ''); ?>">
-                                    <i class="fab fa-facebook-f"></i>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/social/facebook-light.png" alt="Facebook Icon" />
                                 </a>
                             </li>
                         <?php endif; ?>
                         <?php if(get_theme_mod('social_linkedin', '')): ?>
                             <li>
                                 <a href="<?php echo get_theme_mod('social_linkedin', ''); ?>">
-                                    <i class="fab fa-linkedin"></i>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/social/linkedin-light.png" alt="LinkedIn Icon" />
                                 </a>
                             </li>
                         <?php endif; ?>
                         <?php if(get_theme_mod('social_youtube', '')): ?>
                             <li>
                                 <a href="<?php echo get_theme_mod('social_youtube', ''); ?>">
-                                    <i class="fab fa-youtube"></i>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/social/youtube-light.png" alt="YouTube Icon" />
                                 </a>
                             </li>
                         <?php endif; ?>
                         <?php if(get_theme_mod('social_instagram', '')): ?>
                             <li>
                                 <a href="<?php echo get_theme_mod('social_instagram', ''); ?>">
-                                    <i class="fab fa-instagram"></i>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/social/instagram-light.png" alt="Instagram Icon" />
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -119,3 +139,47 @@ if(is_singular('demo')) {
     </div>
 
 </header>
+
+<script>
+
+    var header_background_color_class = '<?php echo $header_bg_color_class; ?>';
+    var header_text_color_class = '<?php echo $header_text_color_class; ?>';
+    var header_background_color_on_scroll = <?php echo ($header_bg_on_scroll) ? 'true' : 'false'; ?>;
+    var header_blur_background = <?php echo ($header_blur_background) ? 'true' : 'false'; ?>;
+
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.header-default');
+        var scroll_threshold = 100; // (window.innerHeight - 200)
+        if (window.scrollY > scroll_threshold) {
+            header.classList.add('has-scrolled');
+            console.log('header_background_color_on_scroll', header_background_color_on_scroll);
+            if (header_background_color_on_scroll) {
+                header.classList.add(header_background_color_class);
+            }
+            if (header_blur_background) {
+                header.classList.add('blur-background');
+            }
+        } else {
+            header.classList.remove('has-scrolled');
+            if (header_background_color_on_scroll) {
+                header.classList.remove(header_background_color_class);
+            }
+            if (header_blur_background) {
+                header.classList.remove('blur-background');
+            }
+        }
+    });
+
+
+    const burger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.header-default__menu-mobile-menu');
+
+    burger.addEventListener('click', function() {
+
+        console.log('click');
+
+        menu.classList.toggle('is-active');
+        burger.classList.toggle('is-active');
+    });
+
+</script>

@@ -31,7 +31,36 @@
 
         <?php wp_head(); ?>
 
+        <?php 
+
+            $header_bg_on_scroll = get_theme_mod('header_bg_on_scroll', false);
+            $burger_type = get_theme_mod('burger_menu_style', 'collapse');
+            $header_bg_color = get_theme_mod('header_bg_color', 'white');
+            $header_text_color = get_theme_mod('header_text_color', 'black');
+            $header_blur_background = get_theme_mod('header_blur_background', false);
+
+            $header_args = [
+                'header_bg_on_scroll' => $header_bg_on_scroll,
+                'burger_type' => $burger_type,
+                'header_bg_color' => $header_bg_color,
+                'header_text_color' => $header_text_color,
+                'header_blur_background' => $header_blur_background
+            ];
+
+        ?>
+
+        <style>
+            :root {
+                --header-bg-color: var(--wp--preset--color--<?php echo $header_bg_color; ?>);
+                --header-text-color: var(--wp--preset--color--<?php echo $header_text_color; ?>);
+                --header-height: 80px;
+                --header-height-mobile: 80px;
+                --logo-height: 60px;
+            }
+        </style>
+
     </head>
+
     <body <?php body_class(); ?>>
 
         <?php
@@ -46,11 +75,11 @@
             $header_layout = get_theme_mod('header_layout', 'default');
 
             if ($header_layout == 'minimal') {
-                get_template_part('template-parts/header', 'minimal');
+                get_template_part('template-parts/header', 'minimal', $header_args);
             } elseif ($header_layout == 'centered') {
-                get_template_part('template-parts/header', 'centered');
+                get_template_part('template-parts/header', 'centered', $header_args);
             } else {
-                get_template_part('template-parts/header', 'default');
+                get_template_part('template-parts/header', 'default', $header_args);
             }
 
         ?>

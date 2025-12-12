@@ -2,12 +2,18 @@
     transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
     z-index: 5;
     &-top {
-        padding: 8px 32px 8px 32px;
+        padding: 8px 16px 8px 16px;
         height: 90px;
+        @media (min-width: $breakpoint-sm) {
+            padding: 8px 32px 8px 32px;
+        }
     }
     &-bottom {
         background-color: #000000;
-        padding: 8px 32px 8px 32px;
+        padding: 8px 16px 8px 16px;
+        @media (min-width: $breakpoint-sm) {
+            padding: 8px 32px 8px 32px;
+        }
         height: 40px;
         color: inherit;
         font-size: 14px;
@@ -25,6 +31,19 @@
                 text-decoration: underline;
             }
         }
+    }
+    &__menu-social li {
+        display: flex;
+    }
+    &__menu-social a {
+        text-decoration: none;
+        color: inherit;
+        margin-right: 0rem;
+        margin-left: 1rem;
+    }
+    &__menu-social img {
+        width: 24px;
+        height: 24px;
     }
 }
 
