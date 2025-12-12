@@ -47,6 +47,8 @@
                 'header_blur_background' => $header_blur_background
             ];
 
+
+            $body_class = ($header_bg_on_scroll ? '' : 'body-padding-for-header');
         ?>
 
         <style>
@@ -56,12 +58,13 @@
                 --header-height: 80px;
                 --header-height-mobile: 80px;
                 --logo-height: 60px;
+                --logo-height-mobile: 60px;
             }
         </style>
 
     </head>
 
-    <body <?php body_class(); ?>>
+    <body <?php body_class($body_class); ?>>
 
         <?php
             // Ensure the `wp_body_open` hook is available for themes with WordPress 5.2 or later.

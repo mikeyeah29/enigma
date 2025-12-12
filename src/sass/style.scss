@@ -27,6 +27,14 @@
 
 @import 'pages/home';
 
+
+.body-padding-for-header {
+    padding-top: var(--header-height-mobile);
+    @media (min-width: $breakpoint-md) {
+        padding-top: var(--header-height);
+    }
+}
+
 .relative { position: relative; z-index: 1; }
 
 .mx-auto { margin-left: auto; margin-right: auto; }

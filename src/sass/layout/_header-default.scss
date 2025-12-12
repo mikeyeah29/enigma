@@ -50,7 +50,8 @@
 }
 
 .header-default__menu a:hover {
-    color: #500606;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .header-default__menu li:last-child a {
@@ -73,6 +74,9 @@
 
     img {
         max-height: var(--logo-height);
+        @media (max-width: $breakpoint-sm) {
+            max-height: var(--logo-height-mobile);
+        }
     }
 }
 
