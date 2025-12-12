@@ -36,6 +36,16 @@ add_action('init', function() {
 
 /*
 ===============================================
+	Demo Setup
+===============================================
+*/
+
+require_once get_template_directory() . '/classes/demo/class-customizer-setup.php';
+
+new \Enigma\Theme\Demo\Customizer_Setup();
+
+/*
+===============================================
 	Register Blocks
 ===============================================
 */
@@ -108,4 +118,22 @@ add_action( 'wp_enqueue_scripts', function() {
     }
 
     wp_add_inline_style( 'enigma-global-styles', $css );
+});
+
+/*
+===============================================
+	Remove Enigma theme from update list
+===============================================
+*/
+
+add_filter('site_transient_update_themes', function ($value) {
+
+    if (!isset($value->response)) {
+        return $value;
+    }
+
+    // Slug must match the theme folder name
+    unset($value->response['enigma']);
+
+    return $value;
 });

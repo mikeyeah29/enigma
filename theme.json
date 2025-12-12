@@ -4,63 +4,13 @@
     "settings": {
         "color": {
             "palette": [
-                {
-                    "name": "Primary",
-                    "slug": "primary",
-                    "color": "#00023F"
-                },
-                {
-                    "name": "Secondary",
-                    "slug": "secondary",
-                    "color": "#E50257"
-                },
-                {
-                    "name": "Accent",
-                    "slug": "accent",
-                    "color": "#FF7300"
-                },
-                {
-                    "name": "Accent 2",
-                    "slug": "accent-2",
-                    "color": "#E7EFFF"
-                },
-                {
-                    "name": "Neutral",
-                    "slug": "neutral",
-                    "color": "#FFF6EC"
-                },
-                {
-                    "name": "White",
-                    "slug": "white",
-                    "color": "#ffffff"
-                },
-                {
-                    "name": "Black",
-                    "slug": "black",
-                    "color": "#000000"
-                }
-            ],
-            "gradients": [
-                {
-                    "slug": "sunset",
-                    "gradient": "linear-gradient(90deg, #ff6a00, #ee0979)",
-                    "name": "Sunset"
-                },
-                {
-                    "slug": "gradient-1",
-                    "gradient": "linear-gradient(90deg, #E60951, #FFD8BA)",
-                    "name": "Gradient 1"
-                },
-                {
-                    "slug": "gradient-2",
-                    "gradient": "linear-gradient(90deg, #002877, #E50257)",
-                    "name": "Gradient 2"
-                },
-                {
-                    "slug": "gradient-3",
-                    "gradient": "linear-gradient(90deg, #0F1E5F, #A6C0F5)",
-                    "name": "Gradient 3"
-                }
+                { "name": "Soft Sage", "slug": "primary", "color": "#8FAF9A" },
+				{ "name": "Deep Teal", "slug": "secondary", "color": "#2F5D62" },
+                { "name": "Muted Clay", "slug": "accent", "color": "#C48A6A" },
+                { "name": "Soft Lavender", "slug": "accent-2", "color": "#B6A6C9" },
+                { "name": "Stone Grey", "slug": "neutral", "color": "#E2E0DA" },
+                { "name": "Warm Off White", "slug": "white", "color": "#F6F4EF" },
+                { "name": "Charcoal", "slug": "text", "color": "#2E2E2E" }
             ],
             "defaultPalette": false,
             "defaultGradients": false,
