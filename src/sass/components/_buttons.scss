@@ -1,0 +1,28 @@
+/* Button Base
+====================================*/
+
+/* =========================================
+   Gutenberg Buttons – Global Style
+   ========================================= */
+
+.wp-block-button {
+    margin-top: 16px;
+}
+
+.wp-block-button__link {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+
+    color: #FAFAF8;
+    border-radius: 3px;
+}

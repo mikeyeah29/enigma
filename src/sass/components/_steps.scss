@@ -1,0 +1,25 @@
+.enigma-step {
+    border: solid 1px;
+    border-radius: 3px;
+    margin-top: 56px;
+    padding-top: 56px;
+    position: relative;
+    &-number {
+        position: absolute;
+        top: -56px;
+        margin: 0px auto;
+        width: 100%;
+        left: 0px;
+        border: solid 1px;
+        border-radius: 100%;
+        width: 110px;
+        height: 110px;
+        right: 0px;
+        background: #206d3e;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 29px;
+    }
+}

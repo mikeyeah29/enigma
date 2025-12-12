@@ -1,0 +1,132 @@
+.header-default {
+    padding: 20px 32px 20px 32px;
+    transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    z-index: 5;
+
+    @media (min-width: 768px) {
+        padding: 20px 20px;
+    }
+
+    .hamburger {
+        z-index: 11;
+    }
+}
+
+.header-default.is-sticky {
+    position: fixed;
+    background: transparent;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.header-default__menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-default__menu li {
+    display: inline-block;
+}
+
+.header-default__menu a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    font-family: $font-display;
+    font-weight: 200;
+    font-style: normal;
+    margin-left: 1.25rem;
+}
+
+.header-default__menu a:hover {
+    color: #500606;
+}
+
+.header-default__menu li:last-child a {
+    border: 1px solid #000000;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+}
+
+.header-default__logo h1 {
+    // padding-top: 0.75rem;
+    margin: 0px;
+    padding: 0px;
+    color: #000000;
+    font-size: 2.625rem;
+    font-family: $font-logo;
+}
+
+.header-default__logo a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.header-default.has-scrolled {
+    background: #2b2a35d6;
+    // background: #2b2a35d1;
+    // backdrop-filter: blur(1rem);
+    padding: 10px 32px 10px 32px;
+
+    @media (min-width: 768px) {
+        padding: 10px 20px;
+    }
+}
+
+.header-default__menu-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: -100%;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(43, 42, 53, 0.8392156863);
+    backdrop-filter: blur(1rem) !important;
+    z-index: 10;
+    transition: right 0.3s ease-in-out;
+
+    &.is-active {
+        right: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0px 3rem;
+        margin: 0;
+        margin-top: 100px;
+        text-align: center;
+
+        li {
+            border-bottom: 1px solid;
+            margin-bottom: 1.25rem;
+            line-height: 1;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                color: #000000;
+                font-size: 2rem;
+                font-family: $font-display;
+                text-decoration: none;
+                display: block;
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    background: #000000;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background: #000000;
+}

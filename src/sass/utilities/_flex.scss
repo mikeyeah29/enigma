@@ -1,0 +1,19 @@
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center { justify-content: center; }
+.justify-content-between { justify-content: space-between; }
+
+.align-items-center { align-items: center; }
+
+.flex-wrap { flex-wrap: wrap; }
+
+
+@media (min-width: 768px) {
+    .d-md-flex { display: flex; }
+    .justify-content-md-center { justify-content: center; }
+    .justify-content-md-between { justify-content: space-between; }
+    .align-items-md-center { align-items: center; }
+    .flex-wrap-md { flex-wrap: wrap; }
+}

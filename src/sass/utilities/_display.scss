@@ -1,0 +1,11 @@
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+
+@media (min-width: 768px) {
+    .d-md-none { display: none; }
+    .d-md-block { display: block; }
+    .d-md-inline { display: inline; }
+    .d-md-inline-block { display: inline-block; }
+}

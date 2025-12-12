@@ -1,0 +1,205 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "name": "Primary",
+                    "slug": "primary",
+                    "color": "#00023F"
+                },
+                {
+                    "name": "Secondary",
+                    "slug": "secondary",
+                    "color": "#E50257"
+                },
+                {
+                    "name": "Accent",
+                    "slug": "accent",
+                    "color": "#FF7300"
+                },
+                {
+                    "name": "Accent 2",
+                    "slug": "accent-2",
+                    "color": "#E7EFFF"
+                },
+                {
+                    "name": "Neutral",
+                    "slug": "neutral",
+                    "color": "#FFF6EC"
+                },
+                {
+                    "name": "White",
+                    "slug": "white",
+                    "color": "#ffffff"
+                },
+                {
+                    "name": "Black",
+                    "slug": "black",
+                    "color": "#000000"
+                }
+            ],
+            "gradients": [
+                {
+                    "slug": "sunset",
+                    "gradient": "linear-gradient(90deg, #ff6a00, #ee0979)",
+                    "name": "Sunset"
+                },
+                {
+                    "slug": "gradient-1",
+                    "gradient": "linear-gradient(90deg, #E60951, #FFD8BA)",
+                    "name": "Gradient 1"
+                },
+                {
+                    "slug": "gradient-2",
+                    "gradient": "linear-gradient(90deg, #002877, #E50257)",
+                    "name": "Gradient 2"
+                },
+                {
+                    "slug": "gradient-3",
+                    "gradient": "linear-gradient(90deg, #0F1E5F, #A6C0F5)",
+                    "name": "Gradient 3"
+                }
+            ],
+            "defaultPalette": false,
+            "defaultGradients": false,
+            "custom": true
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "Polymath",
+                    "name": "Polymath",
+                    "slug": "polymath"
+                }
+            ],
+            "fluid": true,
+            "defaultFontSizes": false,
+            "fontSizes": [
+                {
+                    "slug": "md",
+                    "name": "Medium",
+                    "size": "clamp(1rem, 0.9rem + 0.5vw, 1.25rem)"
+                },
+                {
+                    "slug": "lg",
+                    "name": "Large",
+                    "size": "clamp(1.25rem, 1rem + 1vw, 1.5rem)"
+                },
+                {
+                    "slug": "xl",
+                    "name": "Extra Large",
+                    "size": "clamp(1.5rem, 1rem + 2vw, 2rem)"
+                },
+                {
+                    "slug": "xxl",
+                    "name": "Extra Extra Large",
+                    "size": "clamp(2rem, 1.2rem + 2.5vw, 3rem)"
+                },
+                {
+                    "slug": "hero",
+                    "name": "Hero",
+                    "size": "clamp(2.5rem, 1.5rem + 3vw, 4rem)"
+                }
+            ],
+            "dropCap": false
+        },
+        "spacing": {
+            "padding": true,
+            "units": [
+                "px",
+                "em",
+                "rem",
+                "%"
+            ],
+            "spacingScale": {
+                "steps": 6,
+                "mediumStep": 1.5,
+                "unit": "rem"
+            },
+            "sizes": {
+                "padding": [
+                    {
+                        "slug": "none",
+                        "name": "None",
+                        "size": "0px"
+                    },
+                    {
+                        "slug": "xs",
+                        "name": "Extra Small",
+                        "size": "24px"
+                    },
+                    {
+                        "slug": "sm",
+                        "name": "Small",
+                        "size": "36px"
+                    },
+                    {
+                        "slug": "md",
+                        "name": "Medium",
+                        "size": "48px"
+                    },
+                    {
+                        "slug": "lg",
+                        "name": "Large",
+                        "size": "96px"
+                    },
+                    {
+                        "slug": "xl",
+                        "name": "Extra Large",
+                        "size": "126px"
+                    }
+                ]
+            }
+        },
+        "layout": {
+            "contentSize": "960px",
+            "wideSize": "1180px"
+        }
+    },
+    "styles": {
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--polymath)",
+            "fontSize": "16px",
+            "lineHeight": 1.6
+        },
+        "color": {
+            "background": "var(--wp--preset--color--white)",
+            "text": "var(--wp--preset--color--primary)"
+        },
+        "spacing": {
+            "blockGap": "1.5rem"
+        },
+        "elements": {
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--accent)"
+                },
+                ":hover": {
+                    "color": {
+                        "text": "var(--wp--preset--color--secondary)"
+                    }
+                }
+            },
+            "heading": {
+                "typography": {
+                    "fontWeight": "700",
+                    "lineHeight": 1.2
+                }
+            }
+        },
+        "blocks": {
+            "core/group": {
+                "spacing": {
+                    "padding": {
+                        "left": "2rem",
+                        "right": "2rem"
+                    }
+                }
+            }
+        }
+    },
+    "customTemplates": [],
+    "templateParts": []
+}
