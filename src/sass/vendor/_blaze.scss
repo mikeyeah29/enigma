@@ -26,3 +26,24 @@
     width: var(--slide-width);
     flex-shrink: 0
 }
+
+.blaze-pagination {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 16px;
+    button {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--wp--preset--color--secondary);
+        opacity: 0.3;
+        text-indent: -9999px; /* hide numbers */
+        cursor: pointer;
+        &.active {
+            background-color: var(--wp--preset--color--primary);
+        }
+    }
+}

@@ -65,8 +65,8 @@ add_action(
 ===============================================
 */
 
-// require_once get_template_directory() . '/classes/cpt/class-services.php';
-// new \Enigma\Theme\CPT\Services();
+require_once get_template_directory() . '/classes/cpt/class-reviews.php';
+new \Enigma\CPT\Reviews();
 
 /*
 ===============================================

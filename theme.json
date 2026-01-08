@@ -21,30 +21,35 @@
                 {
                     "fontFamily": "Polymath",
                     "name": "Polymath",
-                    "slug": "polymath"
+                    "slug": "body"
+                },
+                {
+                    "fontFamily": "Ivy Presto Text",
+                    "name": "Ivy Presto Text",
+                    "slug": "heading"
                 }
             ],
             "fluid": true,
             "defaultFontSizes": false,
             "fontSizes": [
                 {
+                    "slug": "sm",
+                    "name": "Small",
+                    "size": "clamp(0.8rem, 0.9rem + 0.5vw, 1.25rem)"
+                },
+                {
                     "slug": "md",
                     "name": "Medium",
-                    "size": "clamp(1rem, 0.9rem + 0.5vw, 1.25rem)"
+                    "size": "clamp(1.25rem, 1rem + 1vw, 1.5rem)"
                 },
                 {
                     "slug": "lg",
                     "name": "Large",
-                    "size": "clamp(1.25rem, 1rem + 1vw, 1.5rem)"
+                    "size": "clamp(1.5rem, 1rem + 2vw, 2rem)"
                 },
                 {
                     "slug": "xl",
                     "name": "Extra Large",
-                    "size": "clamp(1.5rem, 1rem + 2vw, 2rem)"
-                },
-                {
-                    "slug": "xxl",
-                    "name": "Extra Extra Large",
                     "size": "clamp(2rem, 1.2rem + 2.5vw, 3rem)"
                 },
                 {
@@ -78,27 +83,27 @@
                     {
                         "slug": "xs",
                         "name": "Extra Small",
-                        "size": "24px"
+                        "size": "clamp(12px, 1.7vw, 24px)"
                     },
                     {
                         "slug": "sm",
                         "name": "Small",
-                        "size": "36px"
+                        "size": "clamp(18px, 2.6vw, 36px)"
                     },
                     {
                         "slug": "md",
                         "name": "Medium",
-                        "size": "48px"
+                        "size": "clamp(24px, 3.4vw, 48px)"
                     },
                     {
                         "slug": "lg",
                         "name": "Large",
-                        "size": "96px"
+                        "size": "clamp(48px, 8vw, 80px)"
                     },
                     {
                         "slug": "xl",
                         "name": "Extra Large",
-                        "size": "126px"
+                        "size": "clamp(64px, 9vw, 126px)"
                     }
                 ]
             }
@@ -143,8 +148,18 @@
             "core/group": {
                 "spacing": {
                     "padding": {
+                        "top": "clamp(48px, 8vw, 80px)",
+                        "bottom": "clamp(48px, 8vw, 80px)",
                         "left": "2rem",
                         "right": "2rem"
+                    }
+                }
+            },
+            "enigma/testimonial-slider": {
+                "spacing": {
+                    "padding": {
+                        "top": "clamp(48px, 8vw, 80px)",
+                        "bottom": "clamp(48px, 8vw, 80px)"
                     }
                 }
             }

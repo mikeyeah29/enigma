@@ -1,0 +1,28 @@
+{
+    "apiVersion": 3,
+    "name": "enigma/testimonial-slider",
+    "title": "Testimonial Slider",
+    "category": "design",
+    "icon": "menu",
+    "attributes": {
+        "limit": {
+            "type": "number"
+        },
+        "preheadline": {
+            "type": "string",
+            "default": "Client Testimonials"
+        },
+        "headline": {
+            "type": "string",
+            "default": "From Those I’ve Worked With"
+        }
+    },
+    "description": "Testimonial slider for displaying testimonials.",
+    "supports": {
+        "color": {
+            "background": true
+        }
+    },
+    "editorScript": "enigma-blocks-editor",
+    "render": "file:./render.php"
+}

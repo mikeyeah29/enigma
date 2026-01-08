@@ -1,5 +1,6 @@
 
 import AOS from 'aos';
+import BlazeSlider from 'blaze-slider'
 
 AOS.init();
 
@@ -27,3 +28,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+/* Testimonial Slider
+=============================================*/
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    var testimonialSliders = document.querySelectorAll('[data-slider="reviews"]');
+	
+    testimonialSliders.forEach((el) => {
+
+        console.log(el);
+
+        new BlazeSlider(el, {
+            all: {
+                slidesToShow: 1,
+                loop: true,
+                transitionDuration: 450,
+                slideGap: '16px'
+            },
+            '(min-width: 768px)': {
+                slidesToShow: 1,
+            },
+            '(min-width: 1024px)': {
+                slidesToShow: 1,
+            },
+        })
+    })
+
+})

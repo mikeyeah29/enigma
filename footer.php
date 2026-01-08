@@ -14,9 +14,15 @@
 
     $social_icon_style = '-light';
 
+    $footer_bg_color = get_theme_mod('header_bg_color', 'white');
+    $footer_text_color = get_theme_mod('header_text_color', 'black');
+
+    $footer_bg_color_class = ($footer_bg_color) ? 'has-' . $footer_bg_color . '-background-color' : '';
+    $footer_text_color_class = ($footer_text_color) ? 'has-' . $footer_text_color . '-color' : '';
+
 ?>
     
-    <footer class="footer">
+    <footer class="footer <?php echo $footer_bg_color_class; ?> <?php echo $footer_text_color_class; ?>">
 
         <div class="container container--full">
             <div class="d-md-flex">
@@ -47,11 +53,11 @@
                     </ul>
                 </div>
                 <div class="w-md-33">
-                    <h2 class="hdln-2 txt-xl">Legal</h2>
+                    <h2 class="hdln-2 txt-md">Legal</h2>
                     <?php wp_nav_menu(array('theme_location' => 'footer-one')); ?>
                 </div>  
                 <div class="w-md-33">
-                    <h2 class="hdln-2 txt-xl">Social</h2>
+                    <h2 class="hdln-2 txt-md">Social</h2>
                     <ul class="ul-reset footer-social">
                         <?php if($social_facebook): ?>
                             <li>

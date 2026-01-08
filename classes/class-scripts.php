@@ -17,17 +17,17 @@ class Scripts {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_frontend_assets' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_assets' ) );
 
-		add_action( 'enqueue_block_assets', function() {
-			$css_path = get_theme_file_path( 'build/style-index.css' );
-			if ( file_exists( $css_path ) ) {
-				wp_enqueue_style(
-					'enigma-global-styles',
-					get_theme_file_uri( 'build/style-index.css' ),
-					[],
-					filemtime( $css_path )
-				);
-			}
-		});
+		// add_action( 'enqueue_block_assets', function() {
+		// 	$css_path = get_theme_file_path( 'build/style-index.css' );
+		// 	if ( file_exists( $css_path ) ) {
+		// 		wp_enqueue_style(
+		// 			'enigma-global-styles',
+		// 			get_theme_file_uri( 'build/style-index.css' ),
+		// 			[],
+		// 			filemtime( $css_path )
+		// 		);
+		// 	}
+		// });
 	}
 
 	/**
@@ -79,5 +79,9 @@ class Scripts {
                 true
             );
         }
+
+		if($this->font_url) {
+			wp_enqueue_style('enigma-adobe-fonts', $this->font_url, [], null);
+		}
     }
 }

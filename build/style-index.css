@@ -133,8 +133,10 @@ h3 {
 h4 {
   font-size: clamp(1rem, 2vw, 2rem);
 }
+p, li, div, span, button, input, textarea, select {
+  font-size: clamp(0.8rem, 0.9rem + 0.5vw, 1.25rem);
+}
 p {
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
   margin-bottom: 0.75rem;
 }
 @keyframes fadeIn {
@@ -189,6 +191,23 @@ p {
 }
 .flex-wrap {
   flex-wrap: wrap;
+}
+@media (min-width: 600px) {
+  .d-sm-flex {
+    display: flex;
+  }
+  .justify-content-sm-center {
+    justify-content: center;
+  }
+  .justify-content-sm-between {
+    justify-content: space-between;
+  }
+  .align-items-sm-center {
+    align-items: center;
+  }
+  .flex-wrap-sm {
+    flex-wrap: wrap;
+  }
 }
 @media (min-width: 768px) {
   .d-md-flex {
@@ -283,6 +302,26 @@ p {
   box-sizing: border-box;
   width: var(--slide-width);
   flex-shrink: 0;
+}
+.blaze-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.blaze-pagination button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--wp--preset--color--secondary);
+  opacity: 0.3;
+  text-indent: -9999px; /* hide numbers */
+  cursor: pointer;
+}
+.blaze-pagination button.active {
+  background-color: var(--wp--preset--color--primary);
 }
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
   transition-duration: 50ms;
@@ -2402,6 +2441,100 @@ select {
   .wp-block-enigma-hero .hero__inner {
     padding: 0px 2rem;
   }
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/testimonial-slider/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+.enigma-testimonial-slider {
+  text-align: center;
+  position: relative;
+}
+.enigma-testimonial-slider .blaze-prev,
+.enigma-testimonial-slider .blaze-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--wp--preset--color--white);
+  cursor: pointer;
+  font-size: 3em;
+  font-weight: 100;
+  line-height: 1;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+.enigma-testimonial-slider .blaze-prev:hover,
+.enigma-testimonial-slider .blaze-next:hover {
+  opacity: 0.8;
+}
+.enigma-testimonial-slider .blaze-prev {
+  left: 32px;
+}
+@media (max-width: 768px) {
+  .enigma-testimonial-slider .blaze-prev {
+    left: 16px;
+  }
+}
+.enigma-testimonial-slider .blaze-next {
+  right: 32px;
+}
+@media (max-width: 768px) {
+  .enigma-testimonial-slider .blaze-next {
+    right: 16px;
+  }
+}
+.enigma-testimonial-content {
+  padding: 0px 6rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .enigma-testimonial-content {
+    padding: 0px 3rem;
+    margin-top: 3rem;
+  }
+}
+.enigma-testimonial-content p {
+  font-size: var(--wp--preset--font-size--lg);
+  font-family: var(--wp--preset--font-family--heading);
+  font-style: italic;
+}
+.blaze-track-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.blaze-track-container .blaze-track-icon {
+  flex: 0 0 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.blaze-track-container .blaze-track-icon:first-child {
+  left: 0;
+}
+.blaze-track-container .blaze-track-icon:last-child {
+  right: 0;
+}
+@media (max-width: 768px) {
+  .blaze-track-container .blaze-track-icon {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+  }
+  .blaze-track-container .blaze-track-icon:first-child {
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+    top: 20px;
+  }
+  .blaze-track-container .blaze-track-icon:last-child {
+    display: none;
+  }
+}
+.blaze-pagination {
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
