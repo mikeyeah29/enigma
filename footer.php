@@ -26,7 +26,7 @@
 
         <div class="container container--full">
             <div class="d-md-flex">
-                <div class="w-md-33">
+                <div class="w-md-33 mb-1 mb-md-0">
                     <div class="footer-logo">
                         <?php if (has_custom_logo()) : ?>
                             <?php the_custom_logo(); ?>
@@ -52,7 +52,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="w-md-33">
+                <div class="w-md-33 mb-1 mb-md-0">
                     <h2 class="hdln-2 txt-md">Legal</h2>
                     <?php wp_nav_menu(array('theme_location' => 'footer-one')); ?>
                 </div>  
@@ -93,7 +93,7 @@
 
             <hr />
             
-            <div class="d-flex justify-content-between">
+            <div class="d-md-flex justify-content-between">
                 <p class="legal-text mb-0">&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?> | All Rights Reserved</p>
                 <p class="legal-text mb-0">Website made by <a href="https://rockettwd.co.uk" target="_blank" class="txt-underline">RockettWD</a></p>
             </div>

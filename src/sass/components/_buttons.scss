@@ -26,3 +26,19 @@
     color: #FAFAF8;
     border-radius: 3px;
 }
+
+/* The actual button! */
+
+.wp-element-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 3px 4px #00000030;
+        // background-color: darken(#9E3853, 8%) !important;
+    }
+    &.has-accent-background-color {
+        &:hover {
+            background-color: darken(#9E3853, 5%) !important;
+        }
+    }
+}

@@ -29,7 +29,7 @@ h4 {
 }
 
 p, li, div, span, button, input, textarea, select {
-    font-size: clamp(0.8rem, 0.9rem + 0.5vw, 1.25rem);
+    font-size: var(--wp--preset--font-size--sm);
 }
 
 p {

@@ -24,7 +24,7 @@ footer {
         }
     }
     address {
-        font-size: 1rem;
+        font-size: var(--wp--preset--font-size--sm);
         font-style: normal;
         color: $color-footer-text !important;
         margin-bottom: 24px;
@@ -35,7 +35,13 @@ footer {
         line-height: 1.6em !important;
     }
     .hdln-2 {
-        margin-bottom: 48px;
+        margin-bottom: 2rem;
+        font-weight: 100;
+    }
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -53,8 +59,8 @@ footer p {
 
 .footer-logo img {
     width: auto;
-    margin-bottom: 24px;
-    height: 64px;
+    margin-bottom: 3rem;
+    height: 42px;
 }
 
 .footer-social {

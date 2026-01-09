@@ -134,7 +134,7 @@ h4 {
   font-size: clamp(1rem, 2vw, 2rem);
 }
 p, li, div, span, button, input, textarea, select {
-  font-size: clamp(0.8rem, 0.9rem + 0.5vw, 1.25rem);
+  font-size: var(--wp--preset--font-size--sm);
 }
 p {
   margin-bottom: 0.75rem;
@@ -278,6 +278,62 @@ p {
 }
 .mt-0 {
   margin-top: 0 !important;
+}
+.mb-1 {
+  margin-bottom: 1rem !important;
+}
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+.mt-2 {
+  margin-top: 2rem !important;
+}
+.mb-3 {
+  margin-bottom: 3rem !important;
+}
+.mt-3 {
+  margin-top: 3rem !important;
+}
+.mb-4 {
+  margin-bottom: 4rem !important;
+}
+.mt-4 {
+  margin-top: 4rem !important;
+}
+@media (min-width: 768px) {
+  .mb-md-0 {
+    margin-bottom: 0 !important;
+  }
+  .mt-md-0 {
+    margin-top: 0 !important;
+  }
+  .mb-md-1 {
+    margin-bottom: 1rem !important;
+  }
+  .mt-md-1 {
+    margin-top: 1rem !important;
+  }
+  .mb-md-2 {
+    margin-bottom: 2rem !important;
+  }
+  .mt-md-2 {
+    margin-top: 2rem !important;
+  }
+  .mb-md-3 {
+    margin-bottom: 3rem !important;
+  }
+  .mt-md-3 {
+    margin-top: 3rem !important;
+  }
+  .mb-md-4 {
+    margin-bottom: 4rem !important;
+  }
+  .mt-md-4 {
+    margin-top: 4rem !important;
+  }
 }
 .blaze-slider {
   --slides-to-show: 1;
@@ -2142,7 +2198,7 @@ footer .menu a {
   line-height: 1.6em !important;
 }
 footer address {
-  font-size: 1rem;
+  font-size: var(--wp--preset--font-size--sm);
   font-style: normal;
   color: #ffffff !important;
   margin-bottom: 24px;
@@ -2153,7 +2209,11 @@ footer .footer-contact {
   line-height: 1.6em !important;
 }
 footer .hdln-2 {
-  margin-bottom: 48px;
+  margin-bottom: 2rem;
+  font-weight: 100;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 footer i,
 footer h1,
@@ -2167,8 +2227,8 @@ footer p {
 }
 .footer-logo img {
   width: auto;
-  margin-bottom: 24px;
-  height: 64px;
+  margin-bottom: 3rem;
+  height: 42px;
 }
 .footer-social {
   list-style: none;
@@ -2219,6 +2279,17 @@ footer p {
   transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
   color: #FAFAF8;
   border-radius: 3px;
+}
+/* The actual button! */
+.wp-element-button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.wp-element-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1882352941);
+}
+.wp-element-button.has-accent-background-color:hover {
+  background-color: rgb(139.1728971963, 49.3271028037, 73.1098130841) !important;
 }
 /* form */
 input,
