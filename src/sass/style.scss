@@ -27,7 +27,6 @@
 
 @import 'pages/home';
 
-
 .body-padding-for-header {
     padding-top: var(--header-height-mobile);
     @media (min-width: $breakpoint-md) {

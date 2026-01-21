@@ -10,6 +10,7 @@
 var map = {
 	"./accordion/editor.scss": "./blocks/accordion/editor.scss",
 	"./hero/editor.scss": "./blocks/hero/editor.scss",
+	"./logo-slider/editor.scss": "./blocks/logo-slider/editor.scss",
 	"./testimonial-slider/editor.scss": "./blocks/testimonial-slider/editor.scss"
 };
 
@@ -45,6 +46,7 @@ var map = {
 	"./accordion-item/index.js": "./blocks/accordion-item/index.js",
 	"./accordion/index.js": "./blocks/accordion/index.js",
 	"./hero/index.js": "./blocks/hero/index.js",
+	"./logo-slider/index.js": "./blocks/logo-slider/index.js",
 	"./testimonial-slider/index.js": "./blocks/testimonial-slider/index.js"
 };
 
@@ -454,6 +456,112 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ },
+
+/***/ "./blocks/logo-slider/block.json"
+/*!***************************************!*\
+  !*** ./blocks/logo-slider/block.json ***!
+  \***************************************/
+(module) {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":3,"name":"enigma/logo-slider","title":"Logo Slider","category":"design","icon":"images-alt2","description":"A sliding row of client or partner logos.","supports":{"align":["wide","full"],"html":false},"editorScript":"file:./index.js","style":"file:./style.css","editorStyle":"file:./editor.css","render":"file:./render.php","script":"file:./frontend.js"}');
+
+/***/ },
+
+/***/ "./blocks/logo-slider/edit.js"
+/*!************************************!*\
+  !*** ./blocks/logo-slider/edit.js ***!
+  \************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const ALLOWED_BLOCKS = ['core/image'];
+const TEMPLATE = [['core/image', {
+  sizeSlug: 'full'
+}], ['core/image', {
+  sizeSlug: 'full'
+}], ['core/image', {
+  sizeSlug: 'full'
+}]];
+function Edit() {
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
+    className: 'enigma-logo-slider'
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    ...blockProps,
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "blaze-slider",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "blaze-container",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "blaze-track-container",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "blaze-track",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks, {
+              allowedBlocks: ALLOWED_BLOCKS,
+              template: TEMPLATE,
+              orientation: "horizontal",
+              renderAppender: _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks.ButtonBlockAppender
+            })
+          })
+        })
+      })
+    })
+  });
+}
+
+/***/ },
+
+/***/ "./blocks/logo-slider/editor.scss"
+/*!****************************************!*\
+  !*** ./blocks/logo-slider/editor.scss ***!
+  \****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./blocks/logo-slider/index.js"
+/*!*************************************!*\
+  !*** ./blocks/logo-slider/index.js ***!
+  \*************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./block.json */ "./blocks/logo-slider/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./blocks/logo-slider/edit.js");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_1__.name, {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  save: () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.Content, {})
+});
 
 /***/ },
 

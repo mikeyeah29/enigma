@@ -1,0 +1,24 @@
+.enigma-logo-slider {
+    margin: 2rem auto;
+    position: relative;
+    .block-editor-block-list__layout {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    img {
+        height: 50px;
+        width: 200px;
+        max-width: 250px;
+        object-fit: contain;
+        object-position: center;
+        margin: 0 1rem;
+        filter: grayscale(100%);
+    }
+}

@@ -10,6 +10,7 @@
 var map = {
 	"./accordion/style.scss": "./blocks/accordion/style.scss",
 	"./hero/style.scss": "./blocks/hero/style.scss",
+	"./logo-slider/style.scss": "./blocks/logo-slider/style.scss",
 	"./testimonial-slider/style.scss": "./blocks/testimonial-slider/style.scss"
 };
 
@@ -52,6 +53,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************!*\
   !*** ./blocks/hero/style.scss ***!
   \********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./blocks/logo-slider/style.scss"
+/*!***************************************!*\
+  !*** ./blocks/logo-slider/style.scss ***!
+  \***************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

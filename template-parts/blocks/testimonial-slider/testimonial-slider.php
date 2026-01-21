@@ -5,6 +5,7 @@ $styles = $args['styles'] ?? [];
 
 $preheadline = $attributes['preheadline'];
 $headline = $attributes['headline'];
+$limit = $attributes['limit'] ?? 5;
 
 // Build inline style string
 $style = '';
