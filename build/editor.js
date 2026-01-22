@@ -1,11 +1,11 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./blocks sync recursive editor\\.scss$"
+/***/ "./blocks sync recursive editor\\.scss$":
 /*!************************************!*\
   !*** ./blocks/ sync editor\.scss$ ***!
   \************************************/
-(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
 	"./accordion/editor.scss": "./blocks/accordion/editor.scss",
@@ -35,13 +35,13 @@ webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./blocks sync recursive editor\\.scss$";
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks sync recursive index\\.js$"
+/***/ "./blocks sync recursive index\\.js$":
 /*!*********************************!*\
   !*** ./blocks/ sync index\.js$ ***!
   \*********************************/
-(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
 	"./accordion-item/index.js": "./blocks/accordion-item/index.js",
@@ -72,13 +72,13 @@ webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./blocks sync recursive index\\.js$";
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/accordion-item/edit.js"
+/***/ "./blocks/accordion-item/edit.js":
 /*!***************************************!*\
   !*** ./blocks/accordion-item/edit.js ***!
   \***************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -126,13 +126,13 @@ function Edit({
   });
 }
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/accordion-item/index.js"
+/***/ "./blocks/accordion-item/index.js":
 /*!****************************************!*\
   !*** ./blocks/accordion-item/index.js ***!
   \****************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -152,13 +152,13 @@ __webpack_require__.r(__webpack_exports__);
   save: () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, {})
 });
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/accordion/edit.js"
+/***/ "./blocks/accordion/edit.js":
 /*!**********************************!*\
   !*** ./blocks/accordion/edit.js ***!
   \**********************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -223,26 +223,26 @@ function Edit({
   });
 }
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/accordion/editor.scss"
+/***/ "./blocks/accordion/editor.scss":
 /*!**************************************!*\
   !*** ./blocks/accordion/editor.scss ***!
   \**************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/accordion/index.js"
+/***/ "./blocks/accordion/index.js":
 /*!***********************************!*\
   !*** ./blocks/accordion/index.js ***!
   \***********************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -266,26 +266,26 @@ __webpack_require__.r(__webpack_exports__);
   save: () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, {})
 });
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/accordion/style.scss"
+/***/ "./blocks/accordion/style.scss":
 /*!*************************************!*\
   !*** ./blocks/accordion/style.scss ***!
   \*************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/hero/edit.js"
+/***/ "./blocks/hero/edit.js":
 /*!*****************************!*\
   !*** ./blocks/hero/edit.js ***!
   \*****************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -403,26 +403,26 @@ function Edit({
   });
 }
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/hero/editor.scss"
+/***/ "./blocks/hero/editor.scss":
 /*!*********************************!*\
   !*** ./blocks/hero/editor.scss ***!
   \*********************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/hero/index.js"
+/***/ "./blocks/hero/index.js":
 /*!******************************!*\
   !*** ./blocks/hero/index.js ***!
   \******************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -446,37 +446,37 @@ __webpack_require__.r(__webpack_exports__);
   save: () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, {})
 });
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/hero/style.scss"
+/***/ "./blocks/hero/style.scss":
 /*!********************************!*\
   !*** ./blocks/hero/style.scss ***!
   \********************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/logo-slider/block.json"
+/***/ "./blocks/logo-slider/block.json":
 /*!***************************************!*\
   !*** ./blocks/logo-slider/block.json ***!
   \***************************************/
-(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":3,"name":"enigma/logo-slider","title":"Logo Slider","category":"design","icon":"images-alt2","description":"A sliding row of client or partner logos.","supports":{"align":["wide","full"],"html":false},"editorScript":"file:./index.js","style":"file:./style.css","editorStyle":"file:./editor.css","render":"file:./render.php","script":"file:./frontend.js"}');
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/logo-slider/edit.js"
+/***/ "./blocks/logo-slider/edit.js":
 /*!************************************!*\
   !*** ./blocks/logo-slider/edit.js ***!
   \************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -524,26 +524,26 @@ function Edit() {
   });
 }
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/logo-slider/editor.scss"
+/***/ "./blocks/logo-slider/editor.scss":
 /*!****************************************!*\
   !*** ./blocks/logo-slider/editor.scss ***!
   \****************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/logo-slider/index.js"
+/***/ "./blocks/logo-slider/index.js":
 /*!*************************************!*\
   !*** ./blocks/logo-slider/index.js ***!
   \*************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -565,24 +565,24 @@ __webpack_require__.r(__webpack_exports__);
   save: () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.Content, {})
 });
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/post-slider/block.json"
+/***/ "./blocks/post-slider/block.json":
 /*!***************************************!*\
   !*** ./blocks/post-slider/block.json ***!
   \***************************************/
-(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":3,"name":"enigma/post-slider","title":"Post Slider","category":"design","icon":"slides","description":"A slider displaying posts from a selected post type.","attributes":{"postType":{"type":"string","default":"post"},"limit":{"type":"number","default":6},"slidesToShow":{"type":"number","default":3}},"editorScript":"file:./index.js","style":"file:./style.css","editorStyle":"file:./editor.css","script":"file:./frontend.js","render":"file:./render.php","supports":{"color":{"background":true,"text":true},"html":false}}');
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/post-slider/edit.js"
+/***/ "./blocks/post-slider/edit.js":
 /*!************************************!*\
   !*** ./blocks/post-slider/edit.js ***!
   \************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -671,26 +671,26 @@ function Edit({
   });
 }
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/post-slider/editor.scss"
+/***/ "./blocks/post-slider/editor.scss":
 /*!****************************************!*\
   !*** ./blocks/post-slider/editor.scss ***!
   \****************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/post-slider/index.js"
+/***/ "./blocks/post-slider/index.js":
 /*!*************************************!*\
   !*** ./blocks/post-slider/index.js ***!
   \*************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -706,13 +706,13 @@ __webpack_require__.r(__webpack_exports__);
   save: () => null // dynamic block
 });
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/testimonial-slider/edit.js"
+/***/ "./blocks/testimonial-slider/edit.js":
 /*!*******************************************!*\
   !*** ./blocks/testimonial-slider/edit.js ***!
   \*******************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -795,26 +795,26 @@ __webpack_require__.r(__webpack_exports__);
   }
 });
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/testimonial-slider/editor.scss"
+/***/ "./blocks/testimonial-slider/editor.scss":
 /*!***********************************************!*\
   !*** ./blocks/testimonial-slider/editor.scss ***!
   \***********************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/testimonial-slider/index.js"
+/***/ "./blocks/testimonial-slider/index.js":
 /*!********************************************!*\
   !*** ./blocks/testimonial-slider/index.js ***!
   \********************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -838,26 +838,26 @@ __webpack_require__.r(__webpack_exports__);
   save: () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, {})
 });
 
-/***/ },
+/***/ }),
 
-/***/ "./blocks/testimonial-slider/style.scss"
+/***/ "./blocks/testimonial-slider/style.scss":
 /*!**********************************************!*\
   !*** ./blocks/testimonial-slider/style.scss ***!
   \**********************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ },
+/***/ }),
 
-/***/ "./src/editor.js"
+/***/ "./src/editor.js":
 /*!***********************!*\
   !*** ./src/editor.js ***!
   \***********************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -875,13 +875,13 @@ requireEditorStyles.keys().forEach(requireEditorStyles);
 
 
 
-/***/ },
+/***/ }),
 
-/***/ "./src/js/editor-aos.js"
+/***/ "./src/js/editor-aos.js":
 /*!******************************!*\
   !*** ./src/js/editor-aos.js ***!
   \******************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -963,86 +963,86 @@ const addSaveProps = (extraProps, blockType, attributes) => {
 };
 wp.hooks.addFilter('blocks.getSaveContent.extraProps', 'myplugin/aos-save-props', addSaveProps);
 
-/***/ },
+/***/ }),
 
-/***/ "./src/sass/editor-global.scss"
+/***/ "./src/sass/editor-global.scss":
 /*!*************************************!*\
   !*** ./src/sass/editor-global.scss ***!
   \*************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
-/***/ },
+/***/ }),
 
-/***/ "@wordpress/block-editor"
+/***/ "@wordpress/block-editor":
 /*!*************************************!*\
   !*** external ["wp","blockEditor"] ***!
   \*************************************/
-(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["blockEditor"];
 
-/***/ },
+/***/ }),
 
-/***/ "@wordpress/blocks"
+/***/ "@wordpress/blocks":
 /*!********************************!*\
   !*** external ["wp","blocks"] ***!
   \********************************/
-(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["blocks"];
 
-/***/ },
+/***/ }),
 
-/***/ "@wordpress/components"
+/***/ "@wordpress/components":
 /*!************************************!*\
   !*** external ["wp","components"] ***!
   \************************************/
-(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["components"];
 
-/***/ },
+/***/ }),
 
-/***/ "@wordpress/data"
+/***/ "@wordpress/data":
 /*!******************************!*\
   !*** external ["wp","data"] ***!
   \******************************/
-(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["data"];
 
-/***/ },
+/***/ }),
 
-/***/ "@wordpress/i18n"
+/***/ "@wordpress/i18n":
 /*!******************************!*\
   !*** external ["wp","i18n"] ***!
   \******************************/
-(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["i18n"];
 
-/***/ },
+/***/ }),
 
-/***/ "react/jsx-runtime"
+/***/ "react/jsx-runtime":
 /*!**********************************!*\
   !*** external "ReactJSXRuntime" ***!
   \**********************************/
-(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["ReactJSXRuntime"];
 
-/***/ }
+/***/ })
 
 /******/ 	});
 /************************************************************************/
@@ -1055,12 +1055,6 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Check if module exists (development only)
-/******/ 		if (__webpack_modules__[moduleId] === undefined) {
-/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
-/******/ 			e.code = 'MODULE_NOT_FOUND';
-/******/ 			throw e;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {

@@ -53,11 +53,11 @@
                     </ul>
                 </div>
                 <div class="w-md-33 mb-1 mb-md-0">
-                    <h2 class="hdln-2 txt-md">Legal</h2>
+                    <h2 class="hdln-2 has-md-font-size">Legal</h2>
                     <?php wp_nav_menu(array('theme_location' => 'footer-one')); ?>
                 </div>  
                 <div class="w-md-33">
-                    <h2 class="hdln-2 txt-md">Social</h2>
+                    <h2 class="hdln-2 has-md-font-size">Social</h2>
                     <ul class="ul-reset footer-social">
                         <?php if($social_facebook): ?>
                             <li>

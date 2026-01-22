@@ -2400,8 +2400,36 @@ select {
   justify-content: center;
   font-size: 29px;
 }
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.breadcrumbs__item::after {
+  content: "/";
+  margin-left: 0.5rem;
+}
+.breadcrumbs__item:last-child::after {
+  display: none;
+}
+.breadcrumbs__item--current {
+  opacity: 0.7;
+}
 .about-section h2 {
   margin-bottom: 2rem;
+}
+.page-header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(2rem, 4vw, 4rem) 0px;
+  text-align: center;
 }
 .body-padding-for-header {
   padding-top: var(--header-height-mobile);
