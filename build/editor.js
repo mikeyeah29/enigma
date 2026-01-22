@@ -11,6 +11,7 @@ var map = {
 	"./accordion/editor.scss": "./blocks/accordion/editor.scss",
 	"./hero/editor.scss": "./blocks/hero/editor.scss",
 	"./logo-slider/editor.scss": "./blocks/logo-slider/editor.scss",
+	"./post-slider/editor.scss": "./blocks/post-slider/editor.scss",
 	"./testimonial-slider/editor.scss": "./blocks/testimonial-slider/editor.scss"
 };
 
@@ -47,6 +48,7 @@ var map = {
 	"./accordion/index.js": "./blocks/accordion/index.js",
 	"./hero/index.js": "./blocks/hero/index.js",
 	"./logo-slider/index.js": "./blocks/logo-slider/index.js",
+	"./post-slider/index.js": "./blocks/post-slider/index.js",
 	"./testimonial-slider/index.js": "./blocks/testimonial-slider/index.js"
 };
 
@@ -565,6 +567,147 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ "./blocks/post-slider/block.json"
+/*!***************************************!*\
+  !*** ./blocks/post-slider/block.json ***!
+  \***************************************/
+(module) {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":3,"name":"enigma/post-slider","title":"Post Slider","category":"design","icon":"slides","description":"A slider displaying posts from a selected post type.","attributes":{"postType":{"type":"string","default":"post"},"limit":{"type":"number","default":6},"slidesToShow":{"type":"number","default":3}},"editorScript":"file:./index.js","style":"file:./style.css","editorStyle":"file:./editor.css","script":"file:./frontend.js","render":"file:./render.php","supports":{"color":{"background":true,"text":true},"html":false}}');
+
+/***/ },
+
+/***/ "./blocks/post-slider/edit.js"
+/*!************************************!*\
+  !*** ./blocks/post-slider/edit.js ***!
+  \************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    postType,
+    limit,
+    slidesToShow
+  } = attributes;
+  const postTypes = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select('core').getPostTypes({
+    per_page: -1
+  }) || [], []);
+  const options = postTypes.filter(type => type.viewable).map(type => ({
+    label: type.name,
+    value: type.slug
+  }));
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
+    className: 'enigma-post-slider'
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
+        title: "Query Settings",
+        initialOpen: true,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+          label: "Post type",
+          value: postType,
+          options: options,
+          onChange: value => setAttributes({
+            postType: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+          label: "Number of posts",
+          min: 1,
+          max: 20,
+          value: limit,
+          onChange: value => setAttributes({
+            limit: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+          label: "Slides to show",
+          min: 1,
+          max: 6,
+          value: slidesToShow,
+          onChange: value => setAttributes({
+            slidesToShow: value
+          })
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      ...blockProps,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+          children: "Post Slider"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        children: ["Showing ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("code", {
+          children: limit
+        }), " posts from", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("code", {
+          children: postType
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+        children: ["Slides to show: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("code", {
+          children: slidesToShow
+        })]
+      })]
+    })]
+  });
+}
+
+/***/ },
+
+/***/ "./blocks/post-slider/editor.scss"
+/*!****************************************!*\
+  !*** ./blocks/post-slider/editor.scss ***!
+  \****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./blocks/post-slider/index.js"
+/*!*************************************!*\
+  !*** ./blocks/post-slider/index.js ***!
+  \*************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./block.json */ "./blocks/post-slider/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./blocks/post-slider/edit.js");
+
+
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_1__.name, {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  save: () => null // dynamic block
+});
+
+/***/ },
+
 /***/ "./blocks/testimonial-slider/edit.js"
 /*!*******************************************!*\
   !*** ./blocks/testimonial-slider/edit.js ***!
@@ -865,6 +1008,17 @@ module.exports = window["wp"]["blocks"];
 
 "use strict";
 module.exports = window["wp"]["components"];
+
+/***/ },
+
+/***/ "@wordpress/data"
+/*!******************************!*\
+  !*** external ["wp","data"] ***!
+  \******************************/
+(module) {
+
+"use strict";
+module.exports = window["wp"]["data"];
 
 /***/ },
 

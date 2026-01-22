@@ -11,6 +11,7 @@ var map = {
 	"./accordion/style.scss": "./blocks/accordion/style.scss",
 	"./hero/style.scss": "./blocks/hero/style.scss",
 	"./logo-slider/style.scss": "./blocks/logo-slider/style.scss",
+	"./post-slider/style.scss": "./blocks/post-slider/style.scss",
 	"./testimonial-slider/style.scss": "./blocks/testimonial-slider/style.scss"
 };
 
@@ -65,6 +66,19 @@ __webpack_require__.r(__webpack_exports__);
 /***/ "./blocks/logo-slider/style.scss"
 /*!***************************************!*\
   !*** ./blocks/logo-slider/style.scss ***!
+  \***************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./blocks/post-slider/style.scss"
+/*!***************************************!*\
+  !*** ./blocks/post-slider/style.scss ***!
   \***************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -877,6 +891,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var blaze_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! blaze-slider */ "./node_modules/blaze-slider/dist/blaze-slider.esm.js");
 
 
+window.BlazeSlider = blaze_slider__WEBPACK_IMPORTED_MODULE_1__["default"];
 aos__WEBPACK_IMPORTED_MODULE_0___default().init();
 
 /* Smooth scroll to anchor links

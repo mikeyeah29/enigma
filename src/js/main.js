@@ -2,6 +2,8 @@
 import AOS from 'aos';
 import BlazeSlider from 'blaze-slider'
 
+window.BlazeSlider = BlazeSlider;
+
 AOS.init();
 
 /* Smooth scroll to anchor links

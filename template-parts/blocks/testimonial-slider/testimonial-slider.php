@@ -52,7 +52,7 @@ $query = new WP_Query( [
 
 						<div class="blaze-slide enigma-testimonial-slide">
 
-							<div class="enigma-testimonial-content">
+							<div class="enigma-testimonial-content clamp-6">
 								<?php echo wp_kses_post( wpautop( get_the_content() ) ); ?>
 							</div>
 
