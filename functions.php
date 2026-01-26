@@ -11,6 +11,7 @@ require_once get_template_directory() . '/classes/class-scripts.php';
 require_once get_template_directory() . '/classes/class-traffic.php';
 require_once get_template_directory() . '/classes/class-menus.php';
 require_once get_template_directory() . '/classes/customizer/class-customizer.php';
+require_once get_template_directory() . '/classes/class-plugin-check.php';
 
 // get font url from customizer
 $font_url = null;
@@ -29,6 +30,7 @@ if($google_fonts_url) {
 new \Enigma\Theme\Setup();
 new \Enigma\Theme\Scripts($font_url);
 new \Enigma\Theme\Menus();
+new \Enigma\Plugin_Check();
 
 add_action('init', function() {
     new \Enigma\Theme\Customizer();
