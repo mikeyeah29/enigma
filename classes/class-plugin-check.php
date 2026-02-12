@@ -8,6 +8,7 @@ class Plugin_Check {
     private static $required_plugins = [
         // Email
         'contact-form-7/wp-contact-form-7.php' => 'Contact Form 7',
+        'contact-form-7-honeypot/honeypot.php' => 'Contact Form 7 Honeypot',
         'wp-mail-smtp/wp_mail_smtp.php' => 'WP Mail SMTP',
         // Other
         'hide-admin-bar/hide_admin_bar.php' => 'Hide Admin Bar'
