@@ -17,3 +17,4 @@ requireBlockStyles.keys().forEach(requireBlockStyles);
 import './js/helpers';
 import './js/main';
 import './js/accordian';
+import './js/cookie-notice';

@@ -16,6 +16,10 @@
 
     $footer_bg_color = get_theme_mod('header_bg_color', 'white');
     $footer_text_color = get_theme_mod('header_text_color', 'black');
+    $cookie_notice_message = get_theme_mod(
+        'cookie_notice_message',
+        'We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.'
+    );
 
     $footer_bg_color_class = ($footer_bg_color) ? 'has-' . $footer_bg_color . '-background-color' : '';
     $footer_text_color_class = ($footer_text_color) ? 'has-' . $footer_text_color . '-color' : '';
@@ -103,6 +107,17 @@
         <?php wp_footer(); ?>
 
     </footer>
+
+    <?php if (!empty($cookie_notice_message)) : ?>
+        <div id="enigma-cookie-notice" class="enigma-cookie-notice" hidden aria-live="polite" role="region" aria-label="Cookie notice">
+            <div class="enigma-cookie-notice__message">
+                <?php echo wp_kses_post(wpautop($cookie_notice_message)); ?>
+            </div>
+            <button type="button" id="enigma-cookie-notice-accept" class="enigma-cookie-notice__button">
+                <?php esc_html_e('OK', 'enigma'); ?>
+            </button>
+        </div>
+    <?php endif; ?>
 
     </body>
 </html>

@@ -6,6 +6,7 @@ require_once get_template_directory() . '/classes/customizer/class-header-custom
 require_once get_template_directory() . '/classes/customizer/class-typography-customizer.php';
 require_once get_template_directory() . '/classes/customizer/class-contact-customizer.php';
 require_once get_template_directory() . '/classes/customizer/class-social-customizer.php';
+require_once get_template_directory() . '/classes/customizer/class-cookie-customizer.php';
 
 class Customizer {
 
@@ -18,5 +19,6 @@ class Customizer {
         Typography_Customizer::register($wp_customize);
         Contact_Customizer::register($wp_customize);
         Social_Customizer::register($wp_customize);
+        Cookie_Customizer::register($wp_customize);
     }
 }
