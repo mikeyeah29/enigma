@@ -44,16 +44,20 @@
                         </address>
                     <?php endif; ?>
                     <ul class="ul-reset footer-contact">
+                        <?php if($contact_email): ?>
                         <li>
                             <a href="mailto:<?php echo $contact_email; ?>">
                                 <?php echo $contact_email; ?>
                             </a>
                         </li>
+                        <?php endif; ?>
+                        <?php if($contact_phone): ?>
                         <li>
                             <a href="tel:<?php echo $contact_phone; ?>">
                                 <?php echo $contact_phone; ?>
                             </a>
                         </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
                 <div class="w-md-33 mb-1 mb-md-0">
