@@ -1,0 +1,63 @@
+{
+    "apiVersion": 3,
+    "name": "enigma/issues-list",
+    "title": "Issues List",
+    "category": "design",
+    "icon": "tag",
+    "description": "Displays a rounded-pill list of common issues.",
+    "attributes": {
+        "issues": {
+            "type": "array",
+            "default": [
+                "ADHD",
+                "Abuse",
+                "Addiction",
+                "Anger",
+                "Anxiety",
+                "Autism",
+                "Bereavement",
+                "Body dysmorphia",
+                "Breakdown",
+                "Bullying",
+                "Career changes",
+                "Crisis",
+                "Depression",
+                "Eating disorders",
+                "Emotional abuse",
+                "Fear",
+                "Feeling alone / isolated",
+                "Health issues",
+                "Identity issues",
+                "Indecisiveness",
+                "LGBT issues",
+                "Loss of meaning",
+                "Low self confidence",
+                "Motivation / focus",
+                "Negative thinking",
+                "OCD",
+                "PTSD",
+                "Personality disorders",
+                "Phobias",
+                "Psychosexual",
+                "Psychosis",
+                "Relationship problems",
+                "Self sabotage",
+                "Sexual abuse",
+                "Sexuality",
+                "Sleep disorders",
+                "Stress",
+                "Substance misuse",
+                "Trauma"
+            ]
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ],
+        "html": false
+    },
+    "editorScript": "enigma-blocks-editor",
+    "render": "file:./render.php"
+}
