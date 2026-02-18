@@ -5,3 +5,12 @@
     padding: clamp(2rem, 4vw, 4rem) 0px;
     text-align: center;
 }
+.error-404 {
+    text-align: center;
+    padding-top: clamp(2rem, 4vw, 4rem);
+
+    .search-form {
+        max-width: 640px;
+        margin: 2rem auto 0;
+    }
+}
