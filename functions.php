@@ -144,6 +144,27 @@ add_action( 'wp_enqueue_scripts', function() {
 
 /*
 ===============================================
+	Options
+===============================================
+*/
+
+function enigma_get_accreditation_options(): array {
+    return array(
+        'psa'  => 'Professional Standards Authority',
+        'bapc' => 'BAPC',
+        'bapc-registered' => 'BAPC Registered',
+        'bapc-alt' => 'BAPC Alternative',
+        'ukcp' => 'UKCP',
+        'emcc-uk' => 'EMCC UK',
+        'ncps' => 'NCPS',
+        'icf' => 'ICF',
+        'association-for-coaching' => 'Association for Coaching',
+        'hcpc' => 'HCPC'
+    );
+}
+
+/*
+===============================================
 	Remove Enigma theme from update list
 ===============================================
 */

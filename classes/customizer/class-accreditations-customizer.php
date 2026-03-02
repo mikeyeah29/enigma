@@ -49,32 +49,26 @@ class Accreditations_Customizer {
     }
 
     private static function get_choices() {
-        $files = glob(get_theme_file_path('img/accreditations/*.{png,jpg,jpeg,webp,svg}'), GLOB_BRACE);
-        $choices = array();
-
-        $labels = array(
-            'bapc' => 'BAPC',
-            'br'   => 'BR',
-            'psa'  => 'PSA',
-        );
-
-        if (! is_array($files)) {
-            return $choices;
+        if (! function_exists('enigma_get_accreditation_options')) {
+            return array();
         }
 
-        foreach ($files as $file) {
-            $basename = basename($file);
-            if (strpos($basename, '.') === 0) {
+        $choices = enigma_get_accreditation_options();
+
+        if (! is_array($choices)) {
+            return array();
+        }
+
+        $normalized = array();
+        foreach ($choices as $slug => $label) {
+            $slug = sanitize_title((string) $slug);
+            if ($slug === '') {
                 continue;
             }
-
-            $slug = sanitize_title(pathinfo($basename, PATHINFO_FILENAME));
-            $choices[$slug] = $labels[$slug] ?? strtoupper($slug);
+            $normalized[$slug] = (string) $label;
         }
 
-        ksort($choices);
-
-        return $choices;
+        return $normalized;
     }
 
     public static function sanitize_checkbox($checked) {

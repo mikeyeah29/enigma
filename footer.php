@@ -7,13 +7,6 @@
     $contact_email = get_theme_mod('contact_email', '');
     $contact_phone = get_theme_mod('contact_phone', '');
 
-    $social_facebook = get_theme_mod('social_facebook', '');
-    $social_linkedin = get_theme_mod('social_linkedin', '');
-    $social_youtube = get_theme_mod('social_youtube', '');
-    $social_instagram = get_theme_mod('social_instagram', '');
-
-    $social_icon_style = '-light';
-
     $footer_bg_color = get_theme_mod('header_bg_color', 'white');
     $footer_text_color = get_theme_mod('header_text_color', 'black');
     $cookie_notice_message = get_theme_mod(
@@ -46,11 +39,11 @@
                 <div class="w-md-33">
                     <h2 class="hdln-2 has-md-font-size">Social</h2>
                     <?php get_template_part('template-parts/footer/socials', null, [
-                        'facebook' => $social_facebook,
-                        'linkedin' => $social_linkedin,
-                        'youtube' => $social_youtube,
-                        'instagram' => $social_instagram,
-                        'icon_style' => $social_icon_style,
+                        'facebook' => get_theme_mod('social_facebook', ''),
+                        'linkedin' => get_theme_mod('social_linkedin', ''),
+                        'youtube' => get_theme_mod('social_youtube', ''),
+                        'instagram' => get_theme_mod('social_instagram', ''),
+                        'icon_style' => '-light',
                     ]); ?>
                     <?php get_template_part('template-parts/footer/accreditations'); ?>
                 </div>
