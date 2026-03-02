@@ -52,6 +52,7 @@
                         'instagram' => $social_instagram,
                         'icon_style' => $social_icon_style,
                     ]); ?>
+                    <?php get_template_part('template-parts/footer/accreditations'); ?>
                 </div>
             </div>
 

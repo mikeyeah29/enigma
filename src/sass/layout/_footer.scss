@@ -78,3 +78,21 @@ footer p {
         height: 24px;
     }
 }
+
+.footer-accreditations {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+
+    li {
+        margin: 0;
+    }
+
+    img {
+        width: auto;
+        height: 42px;
+        display: block;
+    }
+}

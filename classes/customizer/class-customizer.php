@@ -7,6 +7,7 @@ require_once get_template_directory() . '/classes/customizer/class-typography-cu
 require_once get_template_directory() . '/classes/customizer/class-contact-customizer.php';
 require_once get_template_directory() . '/classes/customizer/class-social-customizer.php';
 require_once get_template_directory() . '/classes/customizer/class-cookie-customizer.php';
+require_once get_template_directory() . '/classes/customizer/class-accreditations-customizer.php';
 
 class Customizer {
 
@@ -20,5 +21,6 @@ class Customizer {
         Contact_Customizer::register($wp_customize);
         Social_Customizer::register($wp_customize);
         Cookie_Customizer::register($wp_customize);
+        Accreditations_Customizer::register($wp_customize);
     }
 }
