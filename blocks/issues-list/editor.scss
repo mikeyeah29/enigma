@@ -1,5 +1,26 @@
 .wp-block-enigma-issues-list {
-    .enigma-issues-list__pill {
-        cursor: default;
-    }
+    background: #73e5c6;
+    border-radius: 28px;
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.wp-block-enigma-issues-list .enigma-issues-list__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1rem;
+    justify-content: center;
+}
+
+.wp-block-enigma-issues-list .enigma-issues-list__pill {
+    background: #6ebba9;
+    border-radius: 999px;
+    color: #f3fffb;
+    cursor: default;
+    display: inline-flex;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 0.9rem 1.75rem;
+    text-align: center;
+    white-space: nowrap;
 }

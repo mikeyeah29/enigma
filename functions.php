@@ -29,8 +29,8 @@ if($google_fonts_url) {
 
 new \Enigma\Theme\Setup();
 new \Enigma\Theme\Scripts($font_url);
-new \Enigma\Theme\Menus();
 new \Enigma\Plugin_Check();
+new \Enigma\Theme\Menus();
 
 add_action('init', function() {
     new \Enigma\Theme\Customizer();
@@ -101,6 +101,23 @@ function getImageByID($id)
         return wp_get_attachment_image_url($id, 'full');
     }
     return '';
+}
+
+function enigma_get_menu_name( string $location, string $default = '' ): string {
+
+    $locations = get_nav_menu_locations();
+
+    if ( ! isset( $locations[ $location ] ) ) {
+        return $default;
+    }
+
+    $menu = wp_get_nav_menu_object( $locations[ $location ] );
+
+    if ( ! $menu ) {
+        return $default;
+    }
+
+    return $menu->name ?: $default;
 }
 
 add_action( 'wp_enqueue_scripts', function() {

@@ -1,5 +1,4 @@
 .wp-block-enigma-issues-list {
-    background: #73e5c6;
     border-radius: 28px;
     padding: clamp(1.25rem, 3vw, 2.5rem);
 }
@@ -12,14 +11,14 @@
 }
 
 .enigma-issues-list__pill {
-    background: #6ebba9;
     border-radius: 999px;
-    color: #f3fffb;
+    // color: #f3fffb;
     display: inline-flex;
-    font-size: clamp(1rem, 1.8vw, 2rem);
+    font-size: clamp(0.875rem, 1.8vw, 1.25rem);
     font-weight: 400;
     line-height: 1.2;
-    padding: 0.9rem 1.75rem;
+    padding: 0.5rem 1.25rem;
     text-align: center;
     white-space: nowrap;
+    background: #ffffff3b;
 }
