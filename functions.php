@@ -10,6 +10,7 @@ require_once get_template_directory() . '/classes/class-setup.php';
 require_once get_template_directory() . '/classes/class-scripts.php';
 require_once get_template_directory() . '/classes/class-traffic.php';
 require_once get_template_directory() . '/classes/class-menus.php';
+require_once get_template_directory() . '/classes/settings/class-cpt-settings.php';
 require_once get_template_directory() . '/classes/customizer/class-customizer.php';
 require_once get_template_directory() . '/classes/class-plugin-check.php';
 
@@ -31,6 +32,7 @@ new \Enigma\Theme\Setup();
 new \Enigma\Theme\Scripts($font_url);
 new \Enigma\Plugin_Check();
 new \Enigma\Theme\Menus();
+new \Enigma\Theme\Settings\CPT_Settings();
 
 add_action('init', function() {
     new \Enigma\Theme\Customizer();
