@@ -17,7 +17,7 @@
                 var is_internal = <?php echo \Enigma\Theme\Traffic::is_internal() ? 'true' : 'false'; ?>;
 
                 var ga_options = {
-                    'debug_mode': true
+                    'debug_mode': false
                 };
 
                 if (is_internal) {

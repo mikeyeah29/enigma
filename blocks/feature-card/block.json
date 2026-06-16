@@ -1,0 +1,45 @@
+{
+    "apiVersion": 3,
+    "name": "enigma/feature-card",
+    "title": "Feature Card",
+    "category": "design",
+    "icon": "excerpt-view",
+    "description": "A reusable card with an icon, title, and supporting copy.",
+    "attributes": {
+        "iconId": {
+            "type": "number"
+        },
+        "iconUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "iconAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "title": {
+            "type": "string",
+            "default": "Impact"
+        },
+        "content": {
+            "type": "string",
+            "default": "Focused on meaningful change, not surface-level optimisation."
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ],
+        "color": {
+            "background": true,
+            "text": true
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true
+        },
+        "html": false
+    },
+    "editorScript": "enigma-blocks-editor"
+}

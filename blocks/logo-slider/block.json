@@ -10,6 +10,9 @@
             "wide",
             "full"
         ],
+        "spacing": {
+            "padding": true
+        },
         "html": false
     },
     "editorScript": "file:./index.js",

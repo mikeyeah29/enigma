@@ -21,6 +21,9 @@
     "supports": {
         "color": {
             "background": true
+        },
+        "spacing": {
+            "padding": true
         }
     },
     "editorScript": "enigma-blocks-editor",

@@ -59,5 +59,3 @@ class Services {
 	}
 
 }
-
-new Services();

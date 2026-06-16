@@ -14,10 +14,9 @@ $color-footer-text: var(--wp--preset--color--text) !important;
 
 // Font Variation Themes
 
-$font-logo: "komu-a", sans-serif;
-$font-brand: "polymath", sans-serif;
-$font-display: "polymath";
-$font-alternate: "polymath";
+$font-display: var(--wp--preset--font-family--display);
+$font-body: var(--wp--preset--font-family--body);
+$font-alternate: var(--wp--preset--font-family--alternate);
 
 /* Breakpoints
 ============================================*/
@@ -29,6 +28,8 @@ $breakpoint-xl: 1280px;
 
 /* Other
 ============================================*/
+
+$border-radius: 5px;
 
 // $header-height-mobile: 80px;
 // $header-height: 100px;

@@ -25,5 +25,3 @@ composer.lock
 # Sass cache (if any)
 # ------------------------------------------------
 .sass-cache/
-
-build/

@@ -1,0 +1,30 @@
+.wp-block-enigma-cta-section {
+    box-sizing: border-box;
+
+    .block-editor-block-list__layout {
+        display: grid;
+        justify-items: center;
+    }
+}
+
+.enigma-cta-background-control {
+    display: grid;
+    gap: 12px;
+}
+
+.enigma-cta-background-control__preview {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.enigma-cta-background-control__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}

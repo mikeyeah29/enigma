@@ -1,0 +1,53 @@
+{
+    "apiVersion": 3,
+    "name": "enigma/cta-section",
+    "title": "CTA Section",
+    "category": "design",
+    "icon": "megaphone",
+    "description": "A locked call to action section with a background image, overlay, heading, copy, and button.",
+    "attributes": {
+        "backgroundImageId": {
+            "type": "number"
+        },
+        "backgroundImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "backgroundImageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "backgroundFocalPoint": {
+            "type": "object",
+            "default": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        "overlayColor": {
+            "type": "string",
+            "default": "#E7E2DE"
+        },
+        "overlayOpacity": {
+            "type": "number",
+            "default": 82
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ],
+        "color": {
+            "background": true,
+            "text": true
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true
+        },
+        "html": false
+    },
+    "editorScript": "enigma-blocks-editor",
+    "render": "file:./render.php"
+}

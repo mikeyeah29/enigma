@@ -29,6 +29,9 @@
             "background": true,
             "text": true
         },
+        "spacing": {
+            "padding": true
+        },
         "html": false
     }
 }

@@ -58,8 +58,6 @@
 
         </div>
 
-        <?php wp_footer(); ?>
-
     </footer>
 
     <?php if (!empty($cookie_notice_message)) : ?>
@@ -72,6 +70,8 @@
             </button>
         </div>
     <?php endif; ?>
+
+    <?php wp_footer(); ?>
 
     </body>
 </html>
