@@ -1,0 +1,43 @@
+{
+    "apiVersion": 3,
+    "name": "enigma/thoughts",
+    "title": "Thoughts",
+    "category": "design",
+    "icon": "lightbulb",
+    "description": "A rotating stack of research-style thought cards.",
+    "attributes": {
+        "thoughts": {
+            "type": "array",
+            "default": [
+                "The strongest ideas usually start as quiet observations.",
+                "A useful question can move the whole room forward.",
+                "Patterns become clearer when they are written down."
+            ]
+        },
+        "animation": {
+            "type": "string",
+            "default": "fade"
+        },
+        "interval": {
+            "type": "number",
+            "default": 4500
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ],
+        "color": {
+            "background": true,
+            "text": true
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true
+        },
+        "html": false
+    },
+    "editorScript": "enigma-blocks-editor",
+    "render": "file:./render.php"
+}

@@ -2966,6 +2966,118 @@ select {
   margin-top: clamp(0.5rem, 2vw, 1rem);
   margin-bottom: 0px;
 }
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/progress-step/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+.wp-block-enigma-progress-step {
+  --enigma-progress-step-line: var(--wp--preset--color--neutral, #e2e0da);
+  --enigma-progress-step-marker-bg: var(--wp--preset--color--neutral, #e2e0da);
+  --enigma-progress-step-marker-text: var(--wp--preset--color--secondary, #2f5d62);
+  padding-bottom: var(--wp--preset--spacing--sm, 2rem);
+  position: relative;
+}
+.wp-block-enigma-progress-step:not(.has-text-color) {
+  color: var(--wp--preset--color--text, #2e2e2e);
+}
+.enigma-progress-step__inner {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.enigma-progress-step__number {
+  align-items: center;
+  background: var(--enigma-progress-step-marker-bg);
+  border-radius: 100px;
+  color: var(--enigma-progress-step-marker-text);
+  display: flex;
+  flex: 0 0 4.063rem;
+  font-size: var(--wp--preset--font-size--sm, 1rem);
+  height: 3.438rem;
+  justify-content: center;
+  line-height: 1;
+  margin-top: 0.938rem;
+  min-width: 4.063rem;
+  position: relative;
+  z-index: 1;
+  width: 160px;
+  white-space: nowrap;
+}
+.enigma-progress-step__number::before {
+  background: var(--enigma-progress-step-line);
+  content: "";
+  display: block;
+  height: calc(100% + var(--wp--preset--spacing--sm, 2rem));
+  right: 50%;
+  position: absolute;
+  top: 3.75rem;
+  transform: translateX(50%);
+  width: 2px;
+  z-index: -1;
+}
+.enigma-progress-step__content {
+  padding-right: 2.5rem;
+}
+.enigma-progress-step__heading {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: var(--wp--preset--font-size--lg, 2rem);
+  line-height: 1.1;
+  margin: 0 0 2.375rem;
+}
+.enigma-progress-step__description {
+  margin-top: 0;
+}
+.enigma-progress-step__button {
+  margin-top: var(--wp--preset--spacing--xs, 1rem);
+}
+@media (min-width: 768px) {
+  .wp-block-enigma-progress-step::before {
+    background: var(--enigma-progress-step-line);
+    content: "";
+    display: block;
+    height: 100%;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 3.75rem;
+    width: 2px;
+  }
+  .enigma-progress-step__inner {
+    justify-content: flex-start;
+  }
+  .enigma-progress-step__number {
+    right: 0;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+  }
+  .enigma-progress-step__number::before {
+    display: none;
+  }
+  .enigma-progress-step__content {
+    padding-right: 0;
+    padding-left: 10%;
+    text-align: left;
+    width: 50%;
+  }
+  .enigma-progress-step--right .enigma-progress-step__inner {
+    justify-content: flex-end;
+  }
+  .enigma-progress-step--right .enigma-progress-step__content {
+    padding-right: 10%;
+    padding-left: 0;
+    text-align: right;
+  }
+}
+@media (min-width: 1024px) {
+  .enigma-progress-step__content {
+    padding-left: 8.125rem;
+  }
+  .enigma-progress-step--right .enigma-progress-step__content {
+    padding-right: 8.125rem;
+  }
+}
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/testimonial-slider/style.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
@@ -3084,4 +3196,52 @@ select {
 }
 .blaze-pagination {
   margin-top: 2rem;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/thoughts/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+.wp-block-enigma-thoughts {
+  --enigma-thoughts-card-bg: var(--wp--preset--color--white, #f6f4ef);
+  --enigma-thoughts-card-border: color-mix(in srgb, currentColor 20%, transparent);
+  --enigma-thoughts-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  height: auto;
+  position: relative;
+}
+.wp-block-enigma-thoughts:not(.has-text-color) {
+  color: var(--wp--preset--color--text, #2e2e2e);
+}
+.enigma-thoughts__deck {
+  position: relative;
+  width: 100%;
+}
+.enigma-thoughts__card {
+  align-items: center;
+  background: linear-gradient(-180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0)), var(--enigma-thoughts-card-bg);
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  opacity: 0;
+  padding: clamp(1rem, 3.5vw, 3rem);
+  pointer-events: none;
+  transform: translateY(24px) scale(0.94) rotate(0deg);
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 0;
+}
+.enigma-thoughts__card p {
+  font-family: var(--wp--preset--font-family--script);
+  font-size: var(--wp--preset--font-size--lg);
+  line-height: 1.18;
+  margin: 0;
+  max-width: 11em;
+  text-align: center;
+}
+.enigma-thoughts__card.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1) rotate(0deg);
+  z-index: 3;
 }

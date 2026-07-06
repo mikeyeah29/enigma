@@ -14,7 +14,9 @@ var map = {
 	"./issues-list/editor.scss": "./blocks/issues-list/editor.scss",
 	"./logo-slider/editor.scss": "./blocks/logo-slider/editor.scss",
 	"./post-slider/editor.scss": "./blocks/post-slider/editor.scss",
-	"./testimonial-slider/editor.scss": "./blocks/testimonial-slider/editor.scss"
+	"./progress-step/editor.scss": "./blocks/progress-step/editor.scss",
+	"./testimonial-slider/editor.scss": "./blocks/testimonial-slider/editor.scss",
+	"./thoughts/editor.scss": "./blocks/thoughts/editor.scss"
 };
 
 
@@ -52,7 +54,9 @@ var map = {
 	"./issues-list/index.js": "./blocks/issues-list/index.js",
 	"./logo-slider/index.js": "./blocks/logo-slider/index.js",
 	"./post-slider/index.js": "./blocks/post-slider/index.js",
-	"./testimonial-slider/index.js": "./blocks/testimonial-slider/index.js"
+	"./progress-step/index.js": "./blocks/progress-step/index.js",
+	"./testimonial-slider/index.js": "./blocks/testimonial-slider/index.js",
+	"./thoughts/index.js": "./blocks/thoughts/index.js"
 };
 
 
@@ -1020,6 +1024,188 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ "./blocks/progress-step/edit.js"
+/*!**************************************!*\
+  !*** ./blocks/progress-step/edit.js ***!
+  \**************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    alignment,
+    number,
+    heading,
+    description,
+    buttonLabel,
+    buttonUrl
+  } = attributes;
+  const safeAlignment = alignment === 'right' ? 'right' : 'left';
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
+    className: `enigma-progress-step enigma-progress-step--${safeAlignment}`
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'enigma'),
+        initialOpen: true,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Alignment', 'enigma'),
+          value: safeAlignment,
+          options: [{
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Left', 'enigma'),
+            value: 'left'
+          }, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Right', 'enigma'),
+            value: 'right'
+          }],
+          onChange: value => setAttributes({
+            alignment: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Step number', 'enigma'),
+          value: number,
+          onChange: value => setAttributes({
+            number: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Button label', 'enigma'),
+          value: buttonLabel,
+          onChange: value => setAttributes({
+            buttonLabel: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Button URL', 'enigma'),
+          value: buttonUrl,
+          onChange: value => setAttributes({
+            buttonUrl: value
+          })
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      ...blockProps,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "enigma-progress-step__inner",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "enigma-progress-step__number",
+          children: number
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "enigma-progress-step__content",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+            tagName: "p",
+            className: "enigma-progress-step__heading",
+            value: heading,
+            allowedFormats: [],
+            onChange: value => setAttributes({
+              heading: value
+            }),
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enter heading...', 'enigma')
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+            tagName: "p",
+            className: "enigma-progress-step__description",
+            value: description,
+            allowedFormats: ['core/bold', 'core/italic', 'core/link'],
+            onChange: value => setAttributes({
+              description: value
+            }),
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enter description...', 'enigma')
+          }), buttonLabel && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+            className: "wp-block-button__link enigma-progress-step__button",
+            children: buttonLabel
+          })]
+        })]
+      })
+    })]
+  });
+}
+
+/***/ },
+
+/***/ "./blocks/progress-step/index.js"
+/*!***************************************!*\
+  !*** ./blocks/progress-step/index.js ***!
+  \***************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   attributes: () => (/* binding */ attributes)
+/* harmony export */ });
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./blocks/progress-step/edit.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./blocks/progress-step/style.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./blocks/progress-step/editor.scss");
+
+
+
+
+const attributes = {
+  alignment: {
+    type: 'string',
+    default: 'left'
+  },
+  number: {
+    type: 'string',
+    default: '01'
+  },
+  heading: {
+    type: 'string',
+    default: ''
+  },
+  description: {
+    type: 'string',
+    default: 'In your initial consultation ...'
+  },
+  buttonLabel: {
+    type: 'string',
+    default: ''
+  },
+  buttonUrl: {
+    type: 'string',
+    default: '#'
+  }
+};
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)('enigma/progress-step', {
+  attributes,
+  supports: {
+    align: ['wide', 'full'],
+    color: {
+      background: true,
+      text: true
+    },
+    spacing: {
+      margin: true,
+      padding: true
+    },
+    html: false
+  },
+  edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
+  save: () => null
+});
+
+/***/ },
+
 /***/ "./blocks/testimonial-slider/edit.js"
 /*!*******************************************!*\
   !*** ./blocks/testimonial-slider/edit.js ***!
@@ -1146,6 +1332,154 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)('enigma/testimonial-slider', {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
+  save: () => null
+});
+
+/***/ },
+
+/***/ "./blocks/thoughts/edit.js"
+/*!*********************************!*\
+  !*** ./blocks/thoughts/edit.js ***!
+  \*********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+const DEFAULT_THOUGHTS = ['The strongest ideas usually start as quiet observations.', 'A useful question can move the whole room forward.', 'Patterns become clearer when they are written down.'];
+const parseThoughts = value => value.split('\n').map(item => item.trim()).filter(Boolean);
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    thoughts = DEFAULT_THOUGHTS,
+    animation = 'fade',
+    interval = 4500
+  } = attributes;
+  const thoughtItems = Array.isArray(thoughts) && thoughts.length ? thoughts : DEFAULT_THOUGHTS;
+  const safeAnimation = animation === 'fall' ? 'fall' : 'fade';
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
+    className: `enigma-thoughts enigma-thoughts--${safeAnimation}`
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Thoughts', 'enigma'),
+        initialOpen: true,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextareaControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Sentences', 'enigma'),
+          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Add one sentence per line.', 'enigma'),
+          value: thoughtItems.join('\n'),
+          onChange: value => setAttributes({
+            thoughts: parseThoughts(value)
+          }),
+          rows: 10
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Rotation animation', 'enigma'),
+          value: safeAnimation,
+          options: [{
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fade', 'enigma'),
+            value: 'fade'
+          }, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Cards fall away', 'enigma'),
+            value: 'fall'
+          }],
+          onChange: value => setAttributes({
+            animation: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Rotation speed', 'enigma'),
+          value: interval,
+          onChange: value => setAttributes({
+            interval: value
+          }),
+          min: 2000,
+          max: 10000,
+          step: 250
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      ...blockProps,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "enigma-thoughts__deck",
+        "aria-hidden": "true",
+        children: thoughtItems.map((thought, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("article", {
+          className: ['enigma-thoughts__card', index === 0 ? 'is-active' : '', index === 1 ? 'is-next' : '', index === 2 ? 'is-after-next' : ''].filter(Boolean).join(' '),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+            children: thought
+          })
+        }, `${thought}-${index}`))
+      })
+    })]
+  });
+}
+
+/***/ },
+
+/***/ "./blocks/thoughts/index.js"
+/*!**********************************!*\
+  !*** ./blocks/thoughts/index.js ***!
+  \**********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   attributes: () => (/* binding */ attributes)
+/* harmony export */ });
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./blocks/thoughts/edit.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ "./blocks/thoughts/style.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./blocks/thoughts/editor.scss");
+
+
+
+
+const attributes = {
+  thoughts: {
+    type: 'array',
+    default: ['The strongest ideas usually start as quiet observations.', 'A useful question can move the whole room forward.', 'Patterns become clearer when they are written down.']
+  },
+  animation: {
+    type: 'string',
+    default: 'fade'
+  },
+  interval: {
+    type: 'number',
+    default: 4500
+  }
+};
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)('enigma/thoughts', {
+  attributes,
+  supports: {
+    align: ['wide', 'full'],
+    color: {
+      background: true,
+      text: true
+    },
+    spacing: {
+      margin: true,
+      padding: true
+    },
+    html: false
+  },
   edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
   save: () => null
 });
@@ -1394,6 +1728,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ "./blocks/progress-step/editor.scss"
+/*!******************************************!*\
+  !*** ./blocks/progress-step/editor.scss ***!
+  \******************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./blocks/progress-step/style.scss"
+/*!*****************************************!*\
+  !*** ./blocks/progress-step/style.scss ***!
+  \*****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
 /***/ "./blocks/testimonial-slider/editor.scss"
 /*!***********************************************!*\
   !*** ./blocks/testimonial-slider/editor.scss ***!
@@ -1411,6 +1771,32 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************************!*\
   !*** ./blocks/testimonial-slider/style.scss ***!
   \**********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./blocks/thoughts/editor.scss"
+/*!*************************************!*\
+  !*** ./blocks/thoughts/editor.scss ***!
+  \*************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./blocks/thoughts/style.scss"
+/*!************************************!*\
+  !*** ./blocks/thoughts/style.scss ***!
+  \************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

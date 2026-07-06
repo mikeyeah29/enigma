@@ -13,6 +13,10 @@ const requireBlockStyles = require.context(
 );
 requireBlockStyles.keys().forEach(requireBlockStyles);
 
+// Block frontend scripts
+import '../blocks/thoughts/frontend';
+
+
 // Global JS (site-wide)
 import './js/helpers';
 import './js/main';

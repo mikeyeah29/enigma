@@ -14,7 +14,9 @@ var map = {
 	"./issues-list/style.scss": "./blocks/issues-list/style.scss",
 	"./logo-slider/style.scss": "./blocks/logo-slider/style.scss",
 	"./post-slider/style.scss": "./blocks/post-slider/style.scss",
-	"./testimonial-slider/style.scss": "./blocks/testimonial-slider/style.scss"
+	"./progress-step/style.scss": "./blocks/progress-step/style.scss",
+	"./testimonial-slider/style.scss": "./blocks/testimonial-slider/style.scss",
+	"./thoughts/style.scss": "./blocks/thoughts/style.scss"
 };
 
 
@@ -49,6 +51,55 @@ webpackContext.id = "./blocks sync recursive style\\.scss$";
 
 /***/ },
 
+/***/ "./blocks/thoughts/frontend.js"
+/*!*************************************!*\
+  !*** ./blocks/thoughts/frontend.js ***!
+  \*************************************/
+() {
+
+const initThoughtsBlock = block => {
+  const cards = Array.from(block.querySelectorAll('.enigma-thoughts__card'));
+  if (cards.length <= 1 || block.dataset.thoughtsReady === 'true') {
+    return;
+  }
+  block.dataset.thoughtsReady = 'true';
+  const interval = Math.max(2000, parseInt(block.dataset.interval || '4500', 10));
+  const animation = block.dataset.animation === 'fall' ? 'fall' : 'fade';
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let activeIndex = 0;
+  const updateCards = () => {
+    cards.forEach((card, index) => {
+      const offset = (index - activeIndex + cards.length) % cards.length;
+      card.classList.toggle('is-active', offset === 0);
+      card.classList.toggle('is-next', offset === 1);
+      card.classList.toggle('is-after-next', offset === 2);
+      card.setAttribute('aria-hidden', offset === 0 ? 'false' : 'true');
+    });
+  };
+  const rotate = () => {
+    const currentCard = cards[activeIndex];
+    const nextIndex = (activeIndex + 1) % cards.length;
+    if (!prefersReducedMotion && animation === 'fall') {
+      currentCard.classList.add('is-leaving');
+      window.setTimeout(() => {
+        currentCard.classList.remove('is-leaving');
+        activeIndex = nextIndex;
+        updateCards();
+      }, 520);
+      return;
+    }
+    activeIndex = nextIndex;
+    updateCards();
+  };
+  updateCards();
+  window.setInterval(rotate, interval);
+};
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.enigma-thoughts').forEach(initThoughtsBlock);
+});
+
+/***/ },
+
 /***/ "./src/index.js"
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -58,13 +109,15 @@ webpackContext.id = "./blocks sync recursive style\\.scss$";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/style.scss */ "./src/sass/style.scss");
-/* harmony import */ var _js_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/helpers */ "./src/js/helpers.js");
-/* harmony import */ var _js_helpers__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_helpers__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/main */ "./src/js/main.js");
-/* harmony import */ var _js_accordian__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/accordian */ "./src/js/accordian.js");
-/* harmony import */ var _js_accordian__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_accordian__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _js_cookie_notice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/cookie-notice */ "./src/js/cookie-notice.js");
-/* harmony import */ var _js_cookie_notice__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_cookie_notice__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _blocks_thoughts_frontend__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../blocks/thoughts/frontend */ "./blocks/thoughts/frontend.js");
+/* harmony import */ var _blocks_thoughts_frontend__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_thoughts_frontend__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _js_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/helpers */ "./src/js/helpers.js");
+/* harmony import */ var _js_helpers__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_helpers__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/main */ "./src/js/main.js");
+/* harmony import */ var _js_accordian__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/accordian */ "./src/js/accordian.js");
+/* harmony import */ var _js_accordian__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_accordian__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _js_cookie_notice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/cookie-notice */ "./src/js/cookie-notice.js");
+/* harmony import */ var _js_cookie_notice__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_cookie_notice__WEBPACK_IMPORTED_MODULE_5__);
 /**
  * Theme Entry Point
  */
@@ -75,6 +128,9 @@ __webpack_require__.r(__webpack_exports__);
 // Import all block styles
 const requireBlockStyles = __webpack_require__("./blocks sync recursive style\\.scss$");
 requireBlockStyles.keys().forEach(requireBlockStyles);
+
+// Block frontend scripts
+
 
 // Global JS (site-wide)
 
@@ -314,10 +370,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ "./blocks/progress-step/style.scss"
+/*!*****************************************!*\
+  !*** ./blocks/progress-step/style.scss ***!
+  \*****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
 /***/ "./blocks/testimonial-slider/style.scss"
 /*!**********************************************!*\
   !*** ./blocks/testimonial-slider/style.scss ***!
   \**********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./blocks/thoughts/style.scss"
+/*!************************************!*\
+  !*** ./blocks/thoughts/style.scss ***!
+  \************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
