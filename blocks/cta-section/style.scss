@@ -6,6 +6,10 @@
 
     padding: var(--wp--preset--spacing--md, 3rem);
 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
     &:not(.has-text-color) {
         color: var(--wp--preset--color--text, #2f3a55);
     }
@@ -31,7 +35,7 @@
     }
 
     .wp-block-heading {
-        max-width: 800px;
+        max-width: 640px;
         margin-top: 0;
         margin-bottom: var(--wp--preset--spacing--xs, 1rem);
         color: inherit;
@@ -40,7 +44,7 @@
     }
 
     p {
-        max-width: 800px;
+        max-width: 640px;
         font-size: var(--wp--preset--font-size--md, 2rem);
     }
 

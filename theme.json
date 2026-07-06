@@ -35,27 +35,27 @@
                 {
                     "slug": "sm",
                     "name": "Small",
-                    "size": "clamp(0.8rem, 0.9rem + 0.4vw, 1.25rem)"
+                    "size": "clamp(14px, 1.25rem + 0.4vw, 18px)"
                 },
                 {
                     "slug": "md",
                     "name": "Medium",
-                    "size": "clamp(1.25rem, 1rem + 1vw, 1.5rem)"
+                    "size": "clamp(18px, 1rem + 1vw, 24px)"
                 },
                 {
                     "slug": "lg",
                     "name": "Large",
-                    "size": "clamp(1.5rem, 1rem + 2vw, 2rem)"
+                    "size": "clamp(24px, 1rem + 2vw, 32px)"
                 },
                 {
                     "slug": "xl",
                     "name": "Extra Large",
-                    "size": "clamp(2rem, 1.2rem + 2.5vw, 3rem)"
+                    "size": "clamp(32px, 1.2rem + 2.5vw, 48px)"
                 },
                 {
                     "slug": "hero",
                     "name": "Hero",
-                    "size": "clamp(2.5rem, 1.5rem + 3vw, 4rem)"
+                    "size": "clamp(40px, 1.5rem + 3vw, 64px)"
                 }
             ],
             "dropCap": false

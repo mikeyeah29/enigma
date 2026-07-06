@@ -4,7 +4,12 @@ import BlazeSlider from 'blaze-slider'
 
 window.BlazeSlider = BlazeSlider;
 
-AOS.init();
+// set default transition duration to 1.25s for AOS
+
+AOS.init({
+    duration: 1250,
+    easing: 'cubic-bezier(0.23, 1, 0.32, 1)'
+});
 
 /* Smooth scroll to anchor links
 =============================================*/
@@ -40,14 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	
     testimonialSliders.forEach((el) => {
 
-        console.log(el);
+        el.classList.add('is-fade');
 
-        new BlazeSlider(el, {
+        const slider = new BlazeSlider(el, {
             all: {
                 slidesToShow: 1,
                 loop: true,
-                transitionDuration: 450,
-                slideGap: '16px'
+                transitionDuration: 0,
+                slideGap: '0px',
+                draggable: false
             },
             '(min-width: 768px)': {
                 slidesToShow: 1,
@@ -55,7 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
             '(min-width: 1024px)': {
                 slidesToShow: 1,
             },
-        })
+        });
+
+        const setActiveSlide = () => {
+            Array.from(slider.track.children).forEach((slide, index) => {
+                const isActive = index === 0;
+
+                slide.classList.toggle('is-active', isActive);
+                slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+            });
+        };
+
+        setActiveSlide();
+        slider.onSlide(setActiveSlide);
     })
 
 })

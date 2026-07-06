@@ -15,6 +15,7 @@ $attributes = wp_parse_args(
         'limit'   => 5,
         'preheadline' => 'Client Testimonials',
         'headline' => 'From Those I’ve Worked With',
+        'service' => 'all',
     ]
 );
 
@@ -41,4 +42,3 @@ get_template_part(
 );
 
 ?>
-

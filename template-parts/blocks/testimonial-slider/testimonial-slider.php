@@ -6,6 +6,7 @@ $styles = $args['styles'] ?? [];
 $preheadline = $attributes['preheadline'];
 $headline = $attributes['headline'];
 $limit = $attributes['limit'] ?? 5;
+$service = $attributes['service'] ?? 'all';
 
 // Build inline style string
 $style = '';
@@ -19,12 +20,24 @@ $wrapper_attributes = get_block_wrapper_attributes( [
 	'data-slider' => 'reviews',
 ] );
 
-$query = new WP_Query( [
+$query_args = [
 	'post_type'           => 'review',
 	'posts_per_page'      => $limit,
 	'post_status'         => 'publish',
 	'ignore_sticky_posts' => true,
-] );
+];
+
+if ( 'all' !== $service && ! empty( $service ) ) {
+	$query_args['tax_query'] = [
+		[
+			'taxonomy' => 'review_service',
+			'field'    => 'term_id',
+			'terms'    => [ absint( $service ) ],
+		],
+	];
+}
+
+$query = new WP_Query( $query_args );
 
 ?>
 

@@ -118,13 +118,15 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<section {...blockProps}>
-				<div className="enigma-cta-section__overlay" aria-hidden="true" />
-				<div className="enigma-cta-section__inner">
-					<InnerBlocks
-						allowedBlocks={ALLOWED_BLOCKS}
-						template={CTA_TEMPLATE}
-						templateLock="all"
-					/>
+				<div className="container container--wide position-relative" style={{ position: 'relative' }}>
+					<div className="enigma-cta-section__overlay" aria-hidden="true" />
+					<div className="enigma-cta-section__inner position-relative" style={{ position: 'relative' }}>
+						<InnerBlocks
+							allowedBlocks={ALLOWED_BLOCKS}
+							template={CTA_TEMPLATE}
+							templateLock="all"
+						/>
+					</div>
 				</div>
 			</section>
 		</>

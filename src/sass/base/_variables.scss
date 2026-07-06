@@ -31,6 +31,14 @@ $breakpoint-xl: 1280px;
 
 $border-radius: 5px;
 
+/* Sexy
+============================================*/
+
+$transition-duration: 1.25s;
+$transition-cubic: cubic-bezier(0.23, 1, 0.32, 1);
+
+$shadow-sexy: 0px 0px 45px #0000001f;
+
 // $header-height-mobile: 80px;
 // $header-height: 100px;
 // $logo-height: 60px;
@@ -38,8 +46,7 @@ $border-radius: 5px;
 /* CSS Variables
 ============================================*/
 
-// :root {
-//     --header-height-mobile: $header-height-mobile;
-//     --header-height: $header-height;
-//     --logo-height: $logo-height;
-// }
+:root {
+    --transition-duration: 1.25s;
+    --transition-cubic: cubic-bezier(0.23, 1, 0.32, 1);
+}

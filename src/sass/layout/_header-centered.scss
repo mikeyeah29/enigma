@@ -73,10 +73,12 @@
     background: rgba(43, 42, 53, 0.8392156863);
     backdrop-filter: blur(1rem) !important;
     z-index: 10;
-    transition: left 0.3s ease-in-out;
+    transition: left $transition-duration $transition-cubic;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+    padding-top: 100px;
+    box-shadow: $shadow-sexy;
 
     @media (min-width: $breakpoint-sm) {
         width: calc(100% - 100px);
@@ -89,16 +91,21 @@
     ul {
         list-style: none;
         padding: 0 1.5rem;
-        margin: 0;
+        margin: 0px auto;
+        max-width: 800px;
+        width: 100%;
     }
 
     li {
-        border-bottom: 1px solid;
-        margin-bottom: 1.25rem;
+        border-bottom: 1px solid var(--wp--preset--color--neutral);
         line-height: 1;
 
         &:last-child {
             border-bottom: none;
+        }
+
+        &:first-child a {
+            padding-top: 0;
         }
     }
 
@@ -108,6 +115,25 @@
         font-family: $font-display;
         text-decoration: none;
         display: block;
-        margin-bottom: 1.25rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        transition: color $transition-duration $transition-cubic;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background: var(--wp--preset--color--primary);
+            position: absolute;
+            bottom: 0;
+            transition: width $transition-duration $transition-cubic;
+        }
+        &:hover {
+            color: var(--wp--preset--color--primary);
+            &:after {
+                width: 100%;
+            }
+        }
     }
 }

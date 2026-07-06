@@ -6,6 +6,7 @@ namespace Enigma\CPT;
 
     public function __construct() {
         add_action( 'init', [ $this, 'register_cpt' ] );
+        add_action( 'init', [ $this, 'register_service_taxonomy' ] );
     }
 
     /**
@@ -56,6 +57,51 @@ namespace Enigma\CPT;
         ];
 
         register_post_type( 'review', $args );
+    }
+
+    /**
+     * Register the Service taxonomy for Reviews.
+     */
+    public function register_service_taxonomy() {
+
+        $labels = [
+            'name'                       => __( 'Services', 'theme' ),
+            'singular_name'              => __( 'Service', 'theme' ),
+            'search_items'               => __( 'Search Services', 'theme' ),
+            'popular_items'              => __( 'Popular Services', 'theme' ),
+            'all_items'                  => __( 'All Services', 'theme' ),
+            'parent_item'                => __( 'Parent Service', 'theme' ),
+            'parent_item_colon'          => __( 'Parent Service:', 'theme' ),
+            'edit_item'                  => __( 'Edit Service', 'theme' ),
+            'view_item'                  => __( 'View Service', 'theme' ),
+            'update_item'                => __( 'Update Service', 'theme' ),
+            'add_new_item'               => __( 'Add New Service', 'theme' ),
+            'new_item_name'              => __( 'New Service Name', 'theme' ),
+            'separate_items_with_commas' => __( 'Separate services with commas', 'theme' ),
+            'add_or_remove_items'        => __( 'Add or remove services', 'theme' ),
+            'choose_from_most_used'      => __( 'Choose from the most used services', 'theme' ),
+            'not_found'                  => __( 'No services found.', 'theme' ),
+            'no_terms'                   => __( 'No services', 'theme' ),
+            'items_list_navigation'      => __( 'Services list navigation', 'theme' ),
+            'items_list'                 => __( 'Services list', 'theme' ),
+            'menu_name'                  => __( 'Services', 'theme' ),
+        ];
+
+        $args = [
+            'labels'            => $labels,
+            'hierarchical'      => true,
+            'public'            => true,
+            'show_ui'           => true,
+            'show_admin_column' => true,
+            'show_in_nav_menus' => true,
+            'show_in_rest'      => true,
+            'rewrite'           => [
+                'slug'       => 'review-service',
+                'with_front' => false,
+            ],
+        ];
+
+        register_taxonomy( 'review_service', [ 'review' ], $args );
     }
 
 }

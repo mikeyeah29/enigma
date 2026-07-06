@@ -1,6 +1,36 @@
 .enigma-testimonial-slider {
     text-align: center;
     position: relative;
+
+    &.is-fade {
+        .blaze-track-container {
+            overflow: hidden;
+        }
+
+        .blaze-track {
+            display: grid;
+            gap: 0;
+            transform: none !important;
+            transition: none !important;
+            will-change: auto;
+        }
+
+        .blaze-slide {
+            grid-area: 1 / 1;
+            width: 100% !important;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity var(--transition-duration) var(--transition-cubic), visibility var(--transition-duration) var(--transition-cubic);
+        }
+
+        .blaze-slide.is-active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    }
+
     .blaze-prev, 
     .blaze-next {
         position: absolute;
@@ -12,7 +42,7 @@
         font-weight: 100;
         line-height: 1;
         z-index: 1;
-        transition: opacity 0.3s ease;
+        transition: opacity var(--transition-duration) var(--transition-cubic);
         &:hover {
             opacity: 0.8;
         }

@@ -9,12 +9,15 @@
 
 .flex-wrap { flex-wrap: wrap; }
 
+.flex-column { flex-direction: column; }
+
 @media (min-width: 600px) {
     .d-sm-flex { display: flex; }
     .justify-content-sm-center { justify-content: center; }
     .justify-content-sm-between { justify-content: space-between; }
     .align-items-sm-center { align-items: center; }
     .flex-wrap-sm { flex-wrap: wrap; }
+    .flex-column-sm { flex-direction: column; }
 }
 
 @media (min-width: 768px) {
@@ -23,4 +26,5 @@
     .justify-content-md-between { justify-content: space-between; }
     .align-items-md-center { align-items: center; }
     .flex-wrap-md { flex-wrap: wrap; }
+    .flex-column-md { flex-direction: column; }
 }

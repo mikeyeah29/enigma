@@ -5,6 +5,8 @@
     padding: var(--wp--preset--spacing--xs) !important;
     border-radius: 5px;
     height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .enigma-feature-card__title {
@@ -25,6 +27,13 @@
         // height: 100% !important;
         object-fit: contain !important;
     }
+
+    /* THIS COULD BE COOL */
+    // position: absolute;
+    // top: -90px;
+    // right: -108px;
+    // width: 354px;
+    // opacity: 0.1;
 }
 
 .enigma-feature-card__content {

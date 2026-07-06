@@ -57,7 +57,7 @@ $styles[]        = '--enigma-cta-overlay-opacity:' . esc_attr( $overlay_opacity 
 $wrapper_attributes = get_block_wrapper_attributes(
 	array(
 		'class' => 'enigma-cta-section',
-		'style' => implode( ';', $styles ) . ';',
+		'style' => implode( ';', $styles ) . ';'
 	)
 );
 ?>

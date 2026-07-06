@@ -1,32 +1,26 @@
 /*!*******************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/cta-section/editor.scss ***!
   \*******************************************************************************************************************************************************************************************************************************************************/
-.wp-block-enigma-cta-section {
-  box-sizing: border-box;
+.enigma-cta-section {
+  padding: var(--wp--preset--spacing--md, 3rem);
+  border-radius: 5px;
 }
-.wp-block-enigma-cta-section .block-editor-block-list__layout {
-  display: grid;
-  justify-items: center;
-}
-.enigma-cta-background-control {
-  display: grid;
-  gap: 12px;
-}
-.enigma-cta-background-control__preview {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 1px solid #ddd;
+.enigma-cta-section .enigma-cta-section__overlay {
+  background: var(--enigma-cta-overlay-color);
   border-radius: 4px;
+  opacity: var(--enigma-cta-overlay-opacity);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
-.enigma-cta-background-control__actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+.enigma-cta-section__inner {
+  padding: var(--wp--preset--spacing--lg, 4rem);
+}
+.enigma-cta-section__inner > * {
+  margin-right: auto;
+  margin-left: auto;
 }
 /*!********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/feature-card/editor.scss ***!

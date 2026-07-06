@@ -15,6 +15,10 @@
         "headline": {
             "type": "string",
             "default": "From Those I’ve Worked With"
+        },
+        "service": {
+            "type": "string",
+            "default": "all"
         }
     },
     "description": "Testimonial slider for displaying testimonials.",

@@ -3,13 +3,35 @@ import {
 	RichText,
 	InspectorControls,
 } from '@wordpress/block-editor';
-import { PanelBody, RangeControl } from '@wordpress/components';
+import { PanelBody, RangeControl, SelectControl } from '@wordpress/components';
+import { useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 export default function Edit({ attributes, setAttributes }) {
-	const { limit, style, preheadline, headline } = attributes;
+	const { limit, service, style, preheadline, headline } = attributes;
 
 	const background = style?.color?.background || 'transparent';
+
+	const services = useSelect(
+		(select) =>
+			select('core').getEntityRecords('taxonomy', 'review_service', {
+				per_page: -1,
+				orderby: 'name',
+				order: 'asc',
+			}) || [],
+		[]
+	);
+
+	const serviceOptions = [
+		{
+			label: __('All services', 'enigma'),
+			value: 'all',
+		},
+		...services.map((term) => ({
+			label: term.name,
+			value: String(term.id),
+		})),
+	];
 
 	const blockProps = useBlockProps({
 		style: {
@@ -29,6 +51,14 @@ export default function Edit({ attributes, setAttributes }) {
 						value={limit ?? 5}
 						onChange={(value) =>
 							setAttributes({ limit: value })
+						}
+					/>
+					<SelectControl
+						label={__('Service', 'enigma')}
+						value={service ?? 'all'}
+						options={serviceOptions}
+						onChange={(value) =>
+							setAttributes({ service: value })
 						}
 					/>
 				</PanelBody>
@@ -58,6 +88,14 @@ export default function Edit({ attributes, setAttributes }) {
 				<p>{__('Slider renders on the front-end.', 'enigma')}</p>
 				<p>
 					{__('Limit:', 'enigma')} {limit ?? 5}
+				</p>
+				<p>
+					{__('Service:', 'enigma')}{' '}
+					{
+						serviceOptions.find(
+							(option) => option.value === (service ?? 'all')
+						)?.label
+					}
 				</p>
 			</div>
 		</>
