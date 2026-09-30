@@ -84,7 +84,7 @@ class Header_Customizer {
 
         // Header Background Color Setting
         $wp_customize->add_setting('header_bg_color', array(
-            'default'   => '',
+            'default'   => 'white',
             'transport' => 'refresh',
         ));
 
@@ -98,7 +98,7 @@ class Header_Customizer {
 
         // Header Text Color Setting
         $wp_customize->add_setting('header_text_color', array(
-            'default'   => '',
+            'default'   => 'text',
             'transport' => 'refresh',
         ));
 

@@ -1,22 +1,22 @@
 /* Colours
 ============================================*/
 
-$color-primary: #6351c0;
-$color-secondary: #98e2d0;
-$color-accent: #7c1919;
-$color-text: #000000;
+$color-primary: var(--wp--preset--color--primary);
+$color-secondary: var(--wp--preset--color--secondary);
+$color-accent: var(--wp--preset--color--accent);
+$color-text: var(--wp--preset--color--text);
 
-$color-footer-background: #000000;
-$color-footer-text: var(--wp--preset--color--text) !important;
+$color-footer-background: var(--wp--preset--color--background);
+$color-footer-text: var(--wp--preset--color--text);
 
 /* Fonts
 ============================================*/
 
 // Font Variation Themes
 
-$font-display: var(--wp--preset--font-family--display);
+$font-display: var(--wp--preset--font-family--heading);
 $font-body: var(--wp--preset--font-family--body);
-$font-alternate: var(--wp--preset--font-family--alternate);
+$font-script: var(--wp--preset--font-family--script);
 
 /* Breakpoints
 ============================================*/

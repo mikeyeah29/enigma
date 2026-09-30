@@ -2174,7 +2174,7 @@ p {
 .header-default__menu-mobile-menu ul li a {
   color: inherit;
   font-size: 1.5rem;
-  font-family: var(--wp--preset--font-family--display);
+  font-family: var(--wp--preset--font-family--heading);
   text-decoration: none;
   display: block;
   margin-bottom: 1.25rem;
@@ -2262,7 +2262,7 @@ p {
   text-decoration: none;
   color: inherit;
   font-size: 16px;
-  font-family: var(--wp--preset--font-family--display);
+  font-family: var(--wp--preset--font-family--heading);
   font-weight: 400;
   font-style: normal;
   margin-left: 1.25rem;
@@ -2386,7 +2386,7 @@ p {
 .header-centered__menu a {
   color: inherit;
   font-size: 1.5rem;
-  font-family: var(--wp--preset--font-family--display);
+  font-family: var(--wp--preset--font-family--heading);
   text-decoration: none;
   display: block;
   padding-top: 1.25rem;
@@ -2411,15 +2411,15 @@ p {
   width: 100%;
 }
 footer {
-  background: #000000;
+  background: var(--wp--preset--color--background);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 32px 0px;
-  color: var(--wp--preset--color--text) !important !important;
+  color: var(--wp--preset--color--text) !important;
 }
 footer hr {
-  border: solid 1px var(--wp--preset--color--text) !important;
+  border: solid 1px var(--wp--preset--color--text);
   border-top: 0px;
   margin: 32px 0px 16px 0px;
 }
@@ -2457,7 +2457,7 @@ footer h1,
 footer h2,
 footer h3,
 footer p {
-  color: var(--wp--preset--color--text) !important !important;
+  color: var(--wp--preset--color--text) !important;
 }
 .legal-text {
   font-size: 14px;
@@ -2711,7 +2711,7 @@ select {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./blocks/cta-section/style.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************/
 .wp-block-enigma-cta-section {
-  --enigma-cta-overlay-color: var(--wp--preset--color--light, #e7e2de);
+  --enigma-cta-overlay-color: var(--wp--preset--color--neutral, #e2e0da);
   --enigma-cta-overlay-opacity: 0.82;
   border-radius: 5px;
   padding: var(--wp--preset--spacing--md, 3rem);
@@ -2816,7 +2816,8 @@ select {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 120px !important;
+  padding-top: var(--hero-padding-top, var(--wp--preset--spacing--lg)) !important;
+  padding-bottom: var(--hero-padding-bottom, var(--wp--preset--spacing--lg)) !important;
   min-height: var(--hero-min-height, auto);
   padding-left: 2rem;
   padding-right: 2rem;

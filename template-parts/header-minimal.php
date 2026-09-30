@@ -5,8 +5,8 @@
 
 $burger_type = get_theme_mod('burger_menu_style', 'collapse');
 
-$header_bg_color = get_theme_mod('header_bg_color', '');
-$header_text_color = get_theme_mod('header_text_color', '');
+$header_bg_color = get_theme_mod('header_bg_color', 'white');
+$header_text_color = get_theme_mod('header_text_color', 'text');
 $header_contact_bg_color = get_theme_mod('header_contact_bg_color', '');
 $header_contact_text_color = get_theme_mod('header_contact_text_color', '');
 

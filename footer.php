@@ -8,7 +8,7 @@
     $contact_phone = get_theme_mod('contact_phone', '');
 
     $footer_bg_color = get_theme_mod('header_bg_color', 'white');
-    $footer_text_color = get_theme_mod('header_text_color', 'black');
+    $footer_text_color = get_theme_mod('header_text_color', 'text');
     $cookie_notice_message = get_theme_mod(
         'cookie_notice_message',
         'We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.'

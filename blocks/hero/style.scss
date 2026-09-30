@@ -10,8 +10,8 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    padding-top: 120px !important;
-    // padding-bottom: 80px;
+    padding-top: var(--hero-padding-top, var(--wp--preset--spacing--lg)) !important;
+    padding-bottom: var(--hero-padding-bottom, var(--wp--preset--spacing--lg)) !important;
     min-height: var(--hero-min-height, auto);
 
     padding-left: 2rem;

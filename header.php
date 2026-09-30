@@ -40,7 +40,7 @@
             $header_bg_on_scroll = get_theme_mod('header_bg_on_scroll', false);
             $burger_type = get_theme_mod('burger_menu_style', 'collapse');
             $header_bg_color = get_theme_mod('header_bg_color', 'white');
-            $header_text_color = get_theme_mod('header_text_color', 'black');
+            $header_text_color = get_theme_mod('header_text_color', 'text');
             $header_blur_background = get_theme_mod('header_blur_background', false);
 
             $header_args = [

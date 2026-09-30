@@ -11,8 +11,8 @@ $attributes = wp_parse_args(
         'backgroundImage'   => '',
         'overlayGradient'   => '',
         'responsiveHeight'  => 'none',
-        'paddingTop'        => 'var(--wp--preset--spacing--40)',
-        'paddingBottom'     => 'var(--wp--preset--spacing--40)',
+        'paddingTop'        => 'var(--wp--preset--spacing--lg)',
+        'paddingBottom'     => 'var(--wp--preset--spacing--lg)',
     ]
 );
 

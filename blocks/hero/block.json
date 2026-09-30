@@ -18,11 +18,11 @@
         },
         "paddingTop": {
             "type": "string",
-            "default": "var(--wp--preset--spacing--40)"
+            "default": "var(--wp--preset--spacing--lg)"
         },
         "paddingBottom": {
             "type": "string",
-            "default": "var(--wp--preset--spacing--40)"
+            "default": "var(--wp--preset--spacing--lg)"
         },
         "style": {
             "type": "object",
