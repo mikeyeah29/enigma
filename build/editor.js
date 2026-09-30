@@ -438,11 +438,23 @@ function Edit({
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       ...blockProps,
-      children: [iconUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "enigma-feature-card__icon",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-          src: iconUrl,
-          alt: iconAlt || ''
+      children: [iconUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+          onSelect: onSelectIcon,
+          allowedTypes: ['image'],
+          value: iconId,
+          render: ({
+            open
+          }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+            type: "button",
+            className: "enigma-feature-card__icon enigma-feature-card__icon-button",
+            onClick: open,
+            "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Replace icon', 'enigma'),
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+              src: iconUrl,
+              alt: iconAlt || ''
+            })
+          })
         })
       }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
@@ -511,23 +523,38 @@ __webpack_require__.r(__webpack_exports__);
 
 const attributes = {
   iconId: {
-    type: 'number'
+    type: 'number',
+    role: 'content'
   },
   iconUrl: {
     type: 'string',
-    default: ''
+    source: 'attribute',
+    selector: '.enigma-feature-card__icon img',
+    attribute: 'src',
+    default: '',
+    role: 'content'
   },
   iconAlt: {
     type: 'string',
-    default: ''
+    source: 'attribute',
+    selector: '.enigma-feature-card__icon img',
+    attribute: 'alt',
+    default: '',
+    role: 'content'
   },
   title: {
     type: 'string',
-    default: 'Impact'
+    source: 'html',
+    selector: '.enigma-feature-card__title',
+    default: 'Impact',
+    role: 'content'
   },
   content: {
     type: 'string',
-    default: 'Focused on meaningful change, not surface-level optimisation.'
+    source: 'html',
+    selector: '.enigma-feature-card__content',
+    default: 'Focused on meaningful change, not surface-level optimisation.',
+    role: 'content'
   }
 };
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)('enigma/feature-card', {

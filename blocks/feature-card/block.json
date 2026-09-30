@@ -7,23 +7,38 @@
     "description": "A reusable card with an icon, title, and supporting copy.",
     "attributes": {
         "iconId": {
-            "type": "number"
+            "type": "number",
+            "role": "content"
         },
         "iconUrl": {
             "type": "string",
-            "default": ""
+            "source": "attribute",
+            "selector": ".enigma-feature-card__icon img",
+            "attribute": "src",
+            "default": "",
+            "role": "content"
         },
         "iconAlt": {
             "type": "string",
-            "default": ""
+            "source": "attribute",
+            "selector": ".enigma-feature-card__icon img",
+            "attribute": "alt",
+            "default": "",
+            "role": "content"
         },
         "title": {
             "type": "string",
-            "default": "Impact"
+            "source": "html",
+            "selector": ".enigma-feature-card__title",
+            "default": "Impact",
+            "role": "content"
         },
         "content": {
             "type": "string",
-            "default": "Focused on meaningful change, not surface-level optimisation."
+            "source": "html",
+            "selector": ".enigma-feature-card__content",
+            "default": "Focused on meaningful change, not surface-level optimisation.",
+            "role": "content"
         }
     },
     "supports": {

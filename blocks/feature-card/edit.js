@@ -75,9 +75,23 @@ export default function Edit({ attributes, setAttributes }) {
 
 			<div {...blockProps}>
 				{iconUrl ? (
-					<div className="enigma-feature-card__icon">
-						<img src={iconUrl} alt={iconAlt || ''} />
-					</div>
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect={onSelectIcon}
+							allowedTypes={['image']}
+							value={iconId}
+							render={({ open }) => (
+								<button
+									type="button"
+									className="enigma-feature-card__icon enigma-feature-card__icon-button"
+									onClick={open}
+									aria-label={__('Replace icon', 'enigma')}
+								>
+									<img src={iconUrl} alt={iconAlt || ''} />
+								</button>
+							)}
+						/>
+					</MediaUploadCheck>
 				) : (
 					<MediaUploadCheck>
 						<MediaUpload

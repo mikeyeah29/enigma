@@ -8,22 +8,37 @@ import './editor.scss';
 const attributes = {
 	iconId: {
 		type: 'number',
+		role: 'content',
 	},
 	iconUrl: {
 		type: 'string',
+		source: 'attribute',
+		selector: '.enigma-feature-card__icon img',
+		attribute: 'src',
 		default: '',
+		role: 'content',
 	},
 	iconAlt: {
 		type: 'string',
+		source: 'attribute',
+		selector: '.enigma-feature-card__icon img',
+		attribute: 'alt',
 		default: '',
+		role: 'content',
 	},
 	title: {
 		type: 'string',
+		source: 'html',
+		selector: '.enigma-feature-card__title',
 		default: 'Impact',
+		role: 'content',
 	},
 	content: {
 		type: 'string',
+		source: 'html',
+		selector: '.enigma-feature-card__content',
 		default: 'Focused on meaningful change, not surface-level optimisation.',
+		role: 'content',
 	},
 };
 
