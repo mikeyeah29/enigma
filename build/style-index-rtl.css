@@ -2760,6 +2760,7 @@ select {
 .enigma-feature-card {
   display: flex;
   align-items: flex-start;
+  box-sizing: border-box;
   gap: var(--wp--preset--spacing--xs);
   padding: var(--wp--preset--spacing--xs) !important;
   border-radius: 5px;
