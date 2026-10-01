@@ -1,3 +1,31 @@
 .enigma-testimonial-slider {
     text-align: center;
 }
+
+.enigma-testimonial-slider__preview-icon {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 91px;
+}
+
+.enigma-testimonial-slider__preview-content {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    p {
+        font-family: var(--wp--preset--font-family--heading);
+        font-size: var(--wp--preset--font-size--lg);
+        font-style: italic;
+        margin: 0;
+    }
+
+    p + p {
+        margin-top: 0.25em;
+    }
+}
+
+.enigma-testimonial-slider__toolbar-settings {
+    min-width: 280px;
+    padding: 16px;
+}

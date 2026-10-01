@@ -13,8 +13,6 @@ $attributes = wp_parse_args(
     $attributes,
     [
         'limit'   => 5,
-        'preheadline' => 'Client Testimonials',
-        'headline' => 'From Those I’ve Worked With',
         'service' => 'all',
     ]
 );

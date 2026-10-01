@@ -8,14 +8,6 @@
         "limit": {
             "type": "number"
         },
-        "preheadline": {
-            "type": "string",
-            "default": "Client Testimonials"
-        },
-        "headline": {
-            "type": "string",
-            "default": "From Those I’ve Worked With"
-        },
         "service": {
             "type": "string",
             "default": "all"

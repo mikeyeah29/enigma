@@ -1266,9 +1266,7 @@ function Edit({
   const {
     limit,
     service,
-    style,
-    preheadline,
-    headline
+    style
   } = attributes;
   const background = style?.color?.background || 'transparent';
   const services = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useSelect)(select => select('core').getEntityRecords('taxonomy', 'review_service', {
@@ -1290,50 +1288,66 @@ function Edit({
     className: 'enigma-testimonial-slider'
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Settings', 'enigma'),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Number of testimonials', 'enigma'),
-          min: 1,
-          max: 20,
-          value: limit ?? 5,
-          onChange: value => setAttributes({
-            limit: value
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.BlockControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarGroup, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Dropdown, {
+          popoverProps: {
+            placement: 'bottom-start'
+          },
+          renderToggle: ({
+            isOpen,
+            onToggle
+          }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
+            icon: "admin-settings",
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Testimonial settings', 'enigma'),
+            onClick: onToggle,
+            "aria-expanded": isOpen
+          }),
+          renderContent: () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "enigma-testimonial-slider__toolbar-settings",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Number of testimonials', 'enigma'),
+              min: 1,
+              max: 20,
+              value: limit ?? 5,
+              onChange: value => setAttributes({
+                limit: value
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Service', 'enigma'),
+              value: service ?? 'all',
+              options: serviceOptions,
+              onChange: value => setAttributes({
+                service: value
+              })
+            })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Service', 'enigma'),
-          value: service ?? 'all',
-          options: serviceOptions,
-          onChange: value => setAttributes({
-            service: value
-          })
-        })]
+        })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       ...blockProps,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
-        tagName: "span",
-        className: "enigma-testimonial-preheadline",
-        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Add preheadline…', 'enigma'),
-        value: preheadline,
-        onChange: value => setAttributes({
-          preheadline: value
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
+        className: "enigma-testimonial-slider__preview-icon",
+        width: "91",
+        height: "68",
+        viewBox: "0 0 91 68",
+        fill: "none",
+        xmlns: "http://www.w3.org/2000/svg",
+        "aria-hidden": "true",
+        focusable: "false",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+          d: "M37.8522 0V27.7162C37.8522 49.1062 23.7055 63.6037 3.79167 67.5L0.0189583 59.4338C9.24029 55.995 15.1667 45.7913 15.1667 37.5H0V0H37.8522ZM91 0V27.7162C91 49.1062 76.7888 63.6075 56.875 67.5L53.0985 59.4338C62.3236 55.995 68.25 45.7913 68.25 37.5H53.1478V0H91Z",
+          fill: "#C7C3B0"
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
-        tagName: "h2",
-        className: "enigma-testimonial-headline",
-        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Add headline…', 'enigma'),
-        value: headline,
-        onChange: value => setAttributes({
-          headline: value
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-        children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Slider renders on the front-end.', 'enigma')
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-        children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Limit:', 'enigma'), " ", limit ?? 5]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-        children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Service:', 'enigma'), ' ', serviceOptions.find(option => option.value === (service ?? 'all'))?.label]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "enigma-testimonial-slider__preview-content",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+          children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Slider renders on the front-end.', 'enigma')
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+          children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Limit:', 'enigma'), " ", limit ?? 5]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+          children: [(0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Service:', 'enigma'), ' ', serviceOptions.find(option => option.value === (service ?? 'all'))?.label]
+        })]
       })]
     })]
   });

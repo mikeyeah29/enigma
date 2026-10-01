@@ -3,8 +3,6 @@
 $attributes = $args['attributes'] ?? [];
 $styles = $args['styles'] ?? [];
 
-$preheadline = $attributes['preheadline'];
-$headline = $attributes['headline'];
 $limit = $attributes['limit'] ?? 5;
 $service = $attributes['service'] ?? 'all';
 
@@ -43,15 +41,6 @@ $query = new WP_Query( $query_args );
 
 <div <?php echo $wrapper_attributes; ?>>
 	<div class="container">
-
-        <!-- <p class="eyebrow">
-            <?php // echo esc_html( $preheadline ); ?>
-        </p>
-
-        <h2 class="hdln-2">
-            <?php // echo esc_html( $headline ); ?>
-        </h2> -->
-
 		<svg width="91" height="68" viewBox="0 0 91 68" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M37.8522 0V27.7162C37.8522 49.1062 23.7055 63.6037 3.79167 67.5L0.0189583 59.4338C9.24029 55.995 15.1667 45.7913 15.1667 37.5H0V0H37.8522ZM91 0V27.7162C91 49.1062 76.7888 63.6075 56.875 67.5L53.0985 59.4338C62.3236 55.995 68.25 45.7913 68.25 37.5H53.1478V0H91Z" fill="#C7C3B0"/>
 		</svg>
