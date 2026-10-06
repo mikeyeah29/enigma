@@ -8,11 +8,7 @@ const DEFAULT_THOUGHTS = [
 	'Patterns become clearer when they are written down.',
 ];
 
-const parseThoughts = (value) =>
-	value
-		.split('\n')
-		.map((item) => item.trim())
-		.filter(Boolean);
+const parseThoughts = (value) => value.split('\n');
 
 export default function Edit({ attributes, setAttributes }) {
 	const {
@@ -60,21 +56,9 @@ export default function Edit({ attributes, setAttributes }) {
 
 			<div {...blockProps}>
 				<div className="enigma-thoughts__deck" aria-hidden="true">
-					{thoughtItems.map((thought, index) => (
-						<article
-							key={`${thought}-${index}`}
-							className={[
-								'enigma-thoughts__card',
-								index === 0 ? 'is-active' : '',
-								index === 1 ? 'is-next' : '',
-								index === 2 ? 'is-after-next' : '',
-							]
-								.filter(Boolean)
-								.join(' ')}
-						>
-							<p>{thought}</p>
-						</article>
-					))}
+					<article className="enigma-thoughts__card is-active">
+						<p>{__('Text Will Appear Here', 'enigma')}</p>
+					</article>
 				</div>
 			</div>
 		</>

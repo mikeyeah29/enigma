@@ -1,7 +1,13 @@
+@use './style';
+
 .wp-block-enigma-progress-step {
     min-height: 9rem;
 }
 
 .wp-block-enigma-progress-step .enigma-progress-step__button {
     cursor: default;
+}
+
+.enigma-progress-step__content {
+    width: calc(50% - 130px);
 }

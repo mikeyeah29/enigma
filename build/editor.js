@@ -1403,7 +1403,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const DEFAULT_THOUGHTS = ['The strongest ideas usually start as quiet observations.', 'A useful question can move the whole room forward.', 'Patterns become clearer when they are written down.'];
-const parseThoughts = value => value.split('\n').map(item => item.trim()).filter(Boolean);
+const parseThoughts = value => value.split('\n');
 function Edit({
   attributes,
   setAttributes
@@ -1460,12 +1460,12 @@ function Edit({
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "enigma-thoughts__deck",
         "aria-hidden": "true",
-        children: thoughtItems.map((thought, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("article", {
-          className: ['enigma-thoughts__card', index === 0 ? 'is-active' : '', index === 1 ? 'is-next' : '', index === 2 ? 'is-after-next' : ''].filter(Boolean).join(' '),
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("article", {
+          className: "enigma-thoughts__card is-active",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            children: thought
+            children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Text Will Appear Here', 'enigma')
           })
-        }, `${thought}-${index}`))
+        })
       })
     })]
   });
