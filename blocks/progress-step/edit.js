@@ -24,11 +24,6 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(value) => setAttributes({ alignment: value })}
 					/>
 					<TextControl
-						label={__('Step number', 'enigma')}
-						value={number}
-						onChange={(value) => setAttributes({ number: value })}
-					/>
-					<TextControl
 						label={__('Button label', 'enigma')}
 						value={buttonLabel}
 						onChange={(value) => setAttributes({ buttonLabel: value })}
@@ -43,7 +38,19 @@ export default function Edit({ attributes, setAttributes }) {
 
 			<div {...blockProps}>
 				<div className="enigma-progress-step__inner">
-					<div className="enigma-progress-step__number">{number}</div>
+					<RichText
+						tagName="div"
+						className="enigma-progress-step__number"
+						value={number}
+						allowedFormats={[]}
+						onChange={(value) => setAttributes({ number: value })}
+						onKeyDown={(event) => {
+							if (event.key === 'Enter') {
+								event.preventDefault();
+							}
+						}}
+						placeholder={__('01', 'enigma')}
+					/>
 
 					<div className="enigma-progress-step__content">
 						<RichText
